@@ -9,7 +9,7 @@ logger.add(new logger.transports.Console, {
 logger.level = 'debug';
 // Initialize Discord Bot
 var bot = new Discord.Client({
-    token: process.env.DATABASE_URL.token,
+    token: process.env.token,
     autorun: true
 });
 
