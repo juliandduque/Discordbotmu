@@ -152,7 +152,11 @@ bot.on("message", message => {
             if (lista === 'cs') tabla = 'ebbabad'
             else if (lista === 'arka') tabla = 'abbfdfe'
             else if (lista === 'iwc') tabla = 'adedaff'
-            else message.reply('Solo se permite lista cs, arka, o iwc ');
+            else
+            {
+                message.reply('Solo se permite lista cs, arka, o iwc ');
+                break;
+            }
 
             var options = { 
                 method: 'GET',
