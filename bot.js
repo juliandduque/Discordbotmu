@@ -158,8 +158,7 @@ bot.on("message", message => {
 
             request(options, function (error, response, body) {
                 if (error) throw new Error(error);
-                var json = JSON.parse(body)
-                message.reply(json.CS);
+                message.reply(JSON.stringify(JSON.parse(body),null,2);  );
             });
 
             break;
