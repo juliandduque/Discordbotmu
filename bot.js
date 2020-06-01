@@ -112,10 +112,7 @@ bot.on("message", message => {
             
             var server = 1
             
-            if (args.length > 1)
-            {
-                server = args[1]
-            }
+            if (args.length > 1) server = args[1]
             
              message.reply('Muerte de God of Darkness reportada en server: ' + server);
 
@@ -145,7 +142,7 @@ bot.on("message", message => {
 
             if (args.length < 2) message.reply('Porfavor indica la lista. (cs, arka, iwc) ');
             
-            var lista = args[1].toLowerCase()
+            var lista = args[1]
 
             var tabla = ''
 
@@ -180,7 +177,7 @@ bot.on("message", message => {
          
             if (args.length < 6) message.reply('Usa este formato: ?registrar {evento (cs, arka, iwc)} {personaje} {raza} {radiance} {guild}');
 
-            var lista = args[1].toLowerCase()
+            var lista = args[1]
             if (lista === 'cs') tabla = 'aadfacd'
             else if (lista === 'arka') tabla = 'abbfdfe'
             else if (lista === 'iwc') tabla = 'adedaff'
