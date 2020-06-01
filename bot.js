@@ -46,7 +46,7 @@ function getList(list, key) {
     request(options, function (error, response, body) {
         if (error) throw new Error(error);
 
-        list = body['trabajos'];
+        list = body
 
     });
 
