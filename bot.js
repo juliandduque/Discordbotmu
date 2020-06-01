@@ -1,14 +1,13 @@
 
 const Discord = require('discord.js');
-
 const bot = new Discord.Client();
+var fechaCS = new Date('2020-06-09T21:00:00.000-05:00');
+
 
 bot.on("ready", function () {
 	console.log("Ready to begin! Serving in " + bot.channels.length + " channels")
     console.log("checking for unfinished jobs");
-
-
-
+    console.log(fechaCS)
 });
 
 bot.on("message", message => 
