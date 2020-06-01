@@ -164,7 +164,6 @@ bot.on("message", message => {
                 url: 'https://extendsclass.com/api/json-storage/bin/' + tabla,
                 headers: 
                 { 
-                    'cache-control': 'no-cache',
                     'security-key': 'JorgeEsGay',
                     'content-type': 'application/x-www-form-urlencoded' 
                 } 
