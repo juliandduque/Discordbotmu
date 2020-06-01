@@ -1,19 +1,20 @@
 
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-var fechaCS = new Date("June 9, 2020 21:00:00");
+var fechaCS = new Date("June 9, 2020 20:00:00-05:00");
 
  function showRemaining(timeto) {
+
     var _second = 1000;
     var _minute = _second * 60;
     var _hour = _minute * 60;
     var _day = _hour * 24;
-    var timer;
-    var now = new Date();
-    var distance = fechaCS - now;
 
-    if (distance < 0) {
-        return 'expired'
+    var now = new Date();
+    var distance = timeto - now;
+
+    while (distance < 0) {
+        distance += 12096e5 // + 2 weeks
     }
 
     var days = Math.floor(distance / _day);
@@ -26,7 +27,7 @@ var fechaCS = new Date("June 9, 2020 21:00:00");
 
 
 bot.on("ready", function () {
-	console.log("Ready to begin! Serving in " + bot.channels.length + " channels")
+	console.log("Ready to begin!")
     console.log("checking for unfinished jobs");
     console.log(showRemaining(fechaCS));
 
