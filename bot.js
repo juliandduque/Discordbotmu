@@ -51,6 +51,10 @@ bot.on("message", message =>
             message.reply("pong");
             break;
 
+        case 'pong':
+            message.reply("pongi me lo mama");
+            break;
+
         case 'help':
             var response = "\n```- ping, ayuda, goodbot, duqueesmarika, amyesmarika, ruler, arkanthosesmarika, rulozeroesmarika, magaoscuraesmarika // me obliga a decir huevadas\
                             \n- tiempoCS //reporta cuanto falta para el CS\
