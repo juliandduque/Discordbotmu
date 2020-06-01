@@ -20,13 +20,11 @@ bot.on("message", message =>
     
     var args = message.content.substring(1).split(' ')
     var command = args[0];
-    
+	
+    console.log(command);
+	
     switch (command) 
-    {
-        case 'ping':
-            message.reply("pong");
-            break;
-            
+    {       
         case 'god of darkness':
             
             var server = 1
