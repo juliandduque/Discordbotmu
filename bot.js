@@ -130,11 +130,8 @@ bot.on("message", message => {
             
             var server = 1
             
-            if (args.length > 1)
-            {
-                server = args[1]
-            }
-            
+            if (args.length > 1) server = args[1]
+
             message.reply('Muerte de Elites reportada en server: ' + server);
 
             setTimeout(function () 
@@ -142,11 +139,43 @@ bot.on("message", message => {
                 message.reply('Elites salen en 5 minutos en el server ' + server + ' @here');
             }, 43500000);
             
-            break;  
-        case 'lista':
+            break; 
             
+        case 'lista':
+
+            if (args.length < 2) message.reply('Porfavor indica la lista. (cs, arka, iwc) ');
+            
+            var lista = args[1].toLowerCase()
+
+            var tabla = ''
+
+            if (lista === 'cs') tabla = 'ebbabad'
+            else if (lista === 'arka') tabla = 'abbfdfe'
+            else if (lista === 'iwc') tabla = 'adedaff'
+            else message.reply('Solo se permite lista cs, arka, o iwc ');
+
             var options = { 
                 method: 'GET',
+                url: 'https://extendsclass.com/api/json-storage/bin/' + tabla,
+                headers: 
+                { 
+                    'cache-control': 'no-cache',
+                    'security-key': 'JorgeEsGay',
+                    'content-type': 'application/x-www-form-urlencoded' 
+                } 
+            };
+
+            request(options, function (error, response, body) {
+                if (error) throw new Error(error);
+                message.reply(JSON.stringify(JSON.parse(body),null,2));
+            });
+
+            break;
+
+         case 'registrar':
+            
+            var options = { 
+                method: 'PATCH',
                 url: 'https://extendsclass.com/api/json-storage/bin/' + 'ebbabad',
                 headers: 
                 { 
