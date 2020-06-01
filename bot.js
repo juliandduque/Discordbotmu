@@ -18,7 +18,6 @@ client.on('message', message => {
 
 });
 // THIS  MUST  BE  THIS  WAY
-console.log(process.env.BOT_TOKEN);
 client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
 
 // const Discord = require('discord.js');
