@@ -177,7 +177,9 @@ bot.on("message", message => {
             break;
 
          case 'registrar':
-            
+         \
+            if (args.length < 2) message.reply('Usa este formato: ?registrar {evento (cs, arka, iwc)} {personaje} {raza} {radiance} {guild}');
+
             var options = { 
                 method: 'PATCH',
                 url: 'https://extendsclass.com/api/json-storage/bin/' + 'ebbabad',
@@ -191,7 +193,7 @@ bot.on("message", message => {
 
             request(options, function (error, response, body) {
                 if (error) throw new Error(error);
-                message.reply(JSON.stringify(JSON.parse(body),null,2);  );
+                message.reply(JSON.stringify(JSON.parse(body),null,2));
             });
 
             break;
