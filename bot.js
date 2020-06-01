@@ -1,10 +1,11 @@
 
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-var fechaCS = new Date("June 9, 2020 20:00:00-05:00");
-var fechaArkaWar = new Date()
+var fechaCS = new Date("May 26, 2020 20:00:00-05:00");
+var fechaArkaWar = new Date("May 27, 2020 21:00:00-05:00");
+var fechaIWC = new Date("May 31, 2020 20:00:00-05:00");
 
- function showRemaining(timeto) {
+ function showRemaining(timeto, frequency) {
 
     var _second = 1000;
     var _minute = _second * 60;
@@ -15,7 +16,7 @@ var fechaArkaWar = new Date()
     var distance = timeto - now;
 
     while (distance < 0) {
-        distance += 12096e5 // + 2 weeks
+        distance += frequency  // + 2 weeks
     }
 
     var days = Math.floor(distance / _day);
@@ -53,6 +54,8 @@ bot.on("message", message =>
         case 'help':
             var response = "\n```- ping, ayuda, goodbot,duqueesmarika // me obliga a decir huevadas\
                             \n- tiempoCS //reporta cuanto falta para el CS\
+                            \n- tiempoArka //reporta cuanto falta para el Arka\
+                            \n- tiempoIWC //reporta cuanto falta para el Ice Wind Castle \
                             \n- darkness {server} //reporta la muerte del god y en 4 horas sale mensaje de ventana abierta\
                             \n- elite {server} //reporta la muerte de los elite y en 11 horas 55 min horas avisa que van a salir```"
             message.reply(response); 
@@ -75,7 +78,15 @@ bot.on("message", message =>
             break;
 
         case 'tiempoCS':
-            message.reply(showRemaining(fechaCS));
+            message.reply(showRemaining(fechaCS, 12096e5));
+            break;
+
+        case 'tiempoArka':
+            message.reply(showRemaining(fechaArkaWar, 604800*1000));
+            break;
+
+        case 'tiempoIWC':
+            message.reply(showRemaining(fechaIWC, 604800*1000));
             break;
 
         case 'darkness':
