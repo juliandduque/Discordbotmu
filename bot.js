@@ -172,10 +172,11 @@ bot.on("message", message => {
 
             request(options, function (error, response, body) {
                 if (error) throw new Error(error);
-                var respuesta = "```";
-                for(var key in body)
+                parsedResponse = JSON.parse(body)
+                console.log(parsedResponse)
+                for(var key in parsedResponse)
                 {
-                    respuesta += 'Piloto: ' + key + ' Personaje: ' + body[key]['personaje'] + ' Raza: ' + body[key]['raza'] + ' Guild: ' + body[key]['guild'] + ' Radiance: ' + body[key]['radiance']
+                    respuesta += '\nPiloto: ' + key + ' Personaje: ' + parsedResponse[key]['personaje'] + ' Raza: ' + parsedResponse[key]['raza'] + ' Guild: ' + parsedResponse[key]['guild'] + ' Radiance: ' + parsedResponse[key]['radiance']
 				}
                 console.log(respuesta)
                 message.reply(respuesta + "```");
