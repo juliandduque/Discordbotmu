@@ -160,8 +160,9 @@ bot.on("message", message => {
                 if (error) throw new Error(error);
                 var json = JSON.parse(body)
                 message.reply(json.CS);
-                break;
             });
+
+            break;
     }
 });
             
