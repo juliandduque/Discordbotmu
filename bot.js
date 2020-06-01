@@ -35,7 +35,6 @@ bot.on("ready", function () {
 bot.on("message", message => {
     if (message.author.bot) return;
 	
-    // The process.env.PREFIX is your bot's prefix in this case.
     if (message.content.indexOf('?') !== 0) return;
     
     var args = message.content.substring(1).split(' ')
@@ -144,6 +143,25 @@ bot.on("message", message => {
             }, 43500000);
             
             break;  
+        case 'lista':
+            
+            var options = { 
+                method: 'GET',
+                url: 'https://extendsclass.com/api/json-storage/bin/' + 'ebbabad',
+                headers: 
+                { 
+                    'cache-control': 'no-cache',
+                    'security-key': 'JorgeEsGay',
+                    'content-type': 'application/x-www-form-urlencoded' 
+                } 
+            };
+
+            request(options, function (error, response, body) {
+                if (error) throw new Error(error);
+                var json = JSON.parse(body)
+                message.reply(json.CS);
+                break;
+            });
     }
 });
             
