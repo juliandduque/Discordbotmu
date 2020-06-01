@@ -10,7 +10,11 @@ bot.on("ready", function () {
 client.on("message", message => 
 {
     if (message.author.bot) return;
-
+	
+    if (message.content === 'ping') {
+	message.reply('pong')
+    }
+	
     // The process.env.PREFIX is your bot's prefix in this case.
     if (message.content.indexOf('!') !== 0) return;
     
@@ -20,7 +24,7 @@ client.on("message", message =>
     switch (command) 
     {
         case 'ping':
-            bot.reply(message, "pong");
+            message.reply("pong");
             break;
             
         case 'god of darkness':
@@ -32,11 +36,11 @@ client.on("message", message =>
                 server = args[1]
             }
             
-            bot.reply(message, 'Muerte de God of Darkness reportada en server: ' + server);
+             message.reply('Muerte de God of Darkness reportada en server: ' + server);
 
             setTimeout(function () 
             {
-                bot.reply(message, 'Ventana del god of darkness esta abierta por 2 horas en el server ' + server + ' @here');
+                message.reply(message, 'Ventana del god of darkness esta abierta por 2 horas en el server ' + server + ' @here');
             }, 14400000);
             
             break;
@@ -50,11 +54,11 @@ client.on("message", message =>
                 server = args[1]
             }
             
-            bot.reply(message, 'Muerte de God of Darkness reportada en server: ' + server);
+            message.reply('Muerte de God of Darkness reportada en server: ' + server);
 
             setTimeout(function () 
             {
-                bot.reply(message, 'Mounstros elite salen en 5 minutos en el server ' + server + ' @here');
+                message.reply('Boss elite salen en 5 minutos en el server ' + server + ' @here');
             }, 43500000);
             
             break;  
