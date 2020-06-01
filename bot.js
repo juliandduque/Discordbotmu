@@ -29,7 +29,7 @@ bot.on("message", message =>
         case 'goodbot':
             message.reply("la geta pirobo");
             break;
-        case 'god of darkness':
+        case 'darkness':
             
             var server = 1
             
