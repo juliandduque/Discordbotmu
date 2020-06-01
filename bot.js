@@ -2,6 +2,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 var fechaCS = new Date("June 9, 2020 20:00:00-05:00");
+var fechaArkaWar = new Date()
 
  function showRemaining(timeto) {
 
@@ -28,9 +29,7 @@ var fechaCS = new Date("June 9, 2020 20:00:00-05:00");
 
 bot.on("ready", function () {
 	console.log("Ready to begin!")
-    console.log("checking for unfinished jobs");
-    console.log(showRemaining(fechaCS));
-
+    //console.log("checking for unfinished jobs");
 });
 
 
@@ -53,6 +52,7 @@ bot.on("message", message =>
 
         case 'help':
             var response = "\n```- ping, ayuda, goodbot,duqueesmarika // me obliga a decir huevadas\
+                            \n- tiempoCS //reporta cuanto falta para el CS\
                             \n- darkness {server} //reporta la muerte del god y en 4 horas sale mensaje de ventana abierta\
                             \n- elite {server} //reporta la muerte de los elite y en 11 horas 55 min horas avisa que van a salir```"
             message.reply(response); 
@@ -72,6 +72,10 @@ bot.on("message", message =>
 
         case 'amyesmarika':
             message.reply("Si pero solo le gusta dar a los claymore.");
+            break;
+
+        case 'tiempoCS':
+            message.reply(showRemaining(tiempoCS));
             break;
 
         case 'darkness':
