@@ -149,7 +149,7 @@ bot.on("message", message => {
 
             var tabla = ''
 
-            if (lista === 'cs') tabla = 'ebbabad'
+            if (lista === 'cs') tabla = 'aadfacd'
             else if (lista === 'arka') tabla = 'abbfdfe'
             else if (lista === 'iwc') tabla = 'adedaff'
             else
@@ -180,9 +180,24 @@ bot.on("message", message => {
          
             if (args.length < 6) message.reply('Usa este formato: ?registrar {evento (cs, arka, iwc)} {personaje} {raza} {radiance} {guild}');
 
+            var lista = args[1].toLowerCase()
+            if (lista === 'cs') tabla = 'aadfacd'
+            else if (lista === 'arka') tabla = 'abbfdfe'
+            else if (lista === 'iwc') tabla = 'adedaff'
+            else
+            {
+                message.reply('Solo se permite lista cs, arka, o iwc ');
+                break;
+            }
+
+            var personaje = args[2]
+            var raza = args[3]
+            var radiance = args[4]
+            var guild = args[5]
+
             var options = { 
                 method: 'PATCH',
-                url: 'https://extendsclass.com/api/json-storage/bin/' + 'ebbabad',
+                url: 'https://extendsclass.com/api/json-storage/bin/' + tabla,
                 headers: 
                 { 
                     'cache-control': 'no-cache',
