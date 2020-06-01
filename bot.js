@@ -145,28 +145,9 @@ bot.on("message", message => {
             
             break;  
 
-        case 'lista':
-            
-            var options = { 
-                method: 'GET',
-                url: 'https://extendsclass.com/api/json-storage/bin/' + 'ebbabad',
-                headers: 
-                { 
-                    'cache-control': 'no-cache',
-                    'security-key': 'JorgeEsGay',
-                    'content-type': 'application/x-www-form-urlencoded' 
-                } 
-            };
 
-            request(options, function (error, response, body) {
-                if (error) throw new Error(error);
-                var json = JSON.parse(body)
-                message.reply(json.CS);
-                break;
-            });
     }
 }
             
-            
-
+           
 bot.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
