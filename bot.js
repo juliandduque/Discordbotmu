@@ -170,7 +170,7 @@ bot.on("message", message => {
             };
 
             request(options, function (error, response, body) {
-                if (error) throw new Error(error);
+                if (error) return;
                 console.log(body)
                 parsedResponse = JSON.parse(body)
                 console.log(parsedResponse)
@@ -217,7 +217,7 @@ bot.on("message", message => {
             };
 
             request(options, function (error, response, body) {
-                if (error) throw new Error(error);
+                if (error) return;
                 message.reply(JSON.stringify(JSON.parse(body),null,2));
             });
 
