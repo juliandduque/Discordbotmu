@@ -27,7 +27,7 @@ bot.on("ready", function () {
 bot.on("message", message => 
 {
     if (message.author.bot) return;
-
+	
     // The process.env.PREFIX is your bot's prefix in this case.
     if (message.content.indexOf('!') !== 0) return;
     
