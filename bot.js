@@ -174,6 +174,7 @@ bot.on("message", message => {
                 if (error) throw new Error(error);
                 parsedResponse = JSON.parse(body)
                 console.log(parsedResponse)
+                respuesta = ''
                 for(var key in parsedResponse)
                 {
                     respuesta += '\nPiloto: ' + key + ' Personaje: ' + parsedResponse[key]['personaje'] + ' Raza: ' + parsedResponse[key]['raza'] + ' Guild: ' + parsedResponse[key]['guild'] + ' Radiance: ' + parsedResponse[key]['radiance']
