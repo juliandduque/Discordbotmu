@@ -4,17 +4,30 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 
 bot.on("ready", function () {
-	console.log("Ready to begin! Serving in " + bot.channels.length + " channels");
+	console.log("Ready to begin! Serving in " + bot.channels.length + " channels")
+    console.log("checking for unfinished jobs");
+
+    var request = require("request");
+
+    var options = { method: 'GET',
+      url: 'https://extendsclass.com/api/json-storage/bin/bdadcec',
+      headers: 
+         'cache-control': 'no-cache',
+         'security-key': 'JorgeEsGay',
+         'content-type': 'application/x-www-form-urlencoded' } };
+
+    request(options, function (error, response, body) {
+      if (error) throw new Error(error);
+
+      console.log(body);
+    });
+
 });
 
 bot.on("message", message => 
 {
     if (message.author.bot) return;
-	
-    if (message.content === 'ping') {
-	message.reply('pong')
-    }
-	
+
     // The process.env.PREFIX is your bot's prefix in this case.
     if (message.content.indexOf('!') !== 0) return;
     
@@ -26,7 +39,9 @@ bot.on("message", message =>
         case 'ping':
             message.reply("pong");
             break;
-            
+        case 'goodbot':
+            message.reply("la geta pirobo");
+            break;
         case 'god of darkness':
             
             var server = 1
