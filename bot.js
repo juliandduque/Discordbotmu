@@ -1,11 +1,12 @@
 
 const Discord = require('discord.js');
+const request = require("request");
 const bot = new Discord.Client();
 var fechaCS = new Date("May 26, 2020 20:00:00-05:00");
 var fechaArkaWar = new Date("May 27, 2020 21:00:00-05:00");
 var fechaIWC = new Date("May 31, 2020 20:00:00-05:00");
 
- function showRemaining(timeto, frequency) {
+function showRemaining(timeto, frequency) {
 
     var _second = 1000;
     var _minute = _second * 60;
@@ -25,18 +26,31 @@ var fechaIWC = new Date("May 31, 2020 20:00:00-05:00");
     var seconds = Math.floor((distance % _minute) / _second);
 
     return days + " dias, " + hours + " horas, " + minutes + " minutos, " + seconds + " segundos"
- }
+    }
 
+function getList(key, list) {
+    var options = { method: 'GET',
+    url: 'https://extendsclass.com/api/json-storage/bin/' + list,
+
+    headers: 
+    { 
+        'cache-control': 'no-cache',
+        'security-key': key,
+        'content-type': 'application/x-www-form-urlencoded' } 
+    };
+
+    request(options, function (error, response, body) {
+        if (error) throw new Error(error);
+
+    return body;
+}
 
 bot.on("ready", function () {
 	console.log("Ready to begin!")
-    //console.log("checking for unfinished jobs");
+    console.log(getList(bdadcec, JorgeEsGay))
 });
 
-
-
-bot.on("message", message => 
-{
+bot.on("message", message => {
     if (message.author.bot) return;
 	
     // The process.env.PREFIX is your bot's prefix in this case.
