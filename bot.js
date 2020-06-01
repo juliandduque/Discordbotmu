@@ -172,6 +172,7 @@ bot.on("message", message => {
 
             request(options, function (error, response, body) {
                 if (error) throw new Error(error);
+                console.log(body)
                 parsedResponse = JSON.parse(body)
                 console.log(parsedResponse)
                 respuesta = ''
@@ -199,6 +200,7 @@ bot.on("message", message => {
                 break;
             }
 
+            var sender = message.sender
             var personaje = args[2]
             var raza = args[3]
             var radiance = args[4]
