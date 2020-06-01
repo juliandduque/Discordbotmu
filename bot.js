@@ -43,6 +43,10 @@ bot.on("message", message =>
             message.reply("Si lo fuera me lo como.");
             break;
 
+        case 'amyesmarika':
+            message.reply("Si pero solo le gusta dar a los claymore.");
+            break;
+
         case 'darkness':
             
             var server = 1
