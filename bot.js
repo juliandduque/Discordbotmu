@@ -1,6 +1,6 @@
 
 const Discord = require('discord.js');
-const request = require("https");
+const request = require("request");
 const bot = new Discord.Client();
 var fechaCS = new Date("May 26, 2020 20:00:00-05:00");
 var fechaArkaWar = new Date("May 27, 2020 21:00:00-05:00");
