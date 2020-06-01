@@ -55,6 +55,10 @@ bot.on("message", message =>
             message.reply("pongi me lo mama");
             break;
 
+        case 'comoingresargremory':
+            message.reply("3 cm o menos bb");
+            break;
+
         case 'help':
             var response = "\n```- ping, ayuda, goodbot, duqueesmarika, amyesmarika, ruler, arkanthosesmarika, rulozeroesmarika, magaoscuraesmarika // me obliga a decir huevadas\
                             \n- tiempoCS //reporta cuanto falta para el CS\
