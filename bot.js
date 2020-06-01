@@ -28,7 +28,7 @@ function showRemaining(timeto, frequency) {
     return days + " dias, " + hours + " horas, " + minutes + " minutos, " + seconds + " segundos"
     }
 
-function getList(key, list) {
+function getList(list, key) {
     var options = { method: 'GET',
     url: 'https://extendsclass.com/api/json-storage/bin/' + list,
 
@@ -42,7 +42,7 @@ function getList(key, list) {
     request(options, function (error, response, body) {
         if (error) throw new Error(error);
         
-        return response;
+        return body;
     });
 }
 
