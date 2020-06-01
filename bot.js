@@ -75,7 +75,7 @@ bot.on("message", message =>
             break;
 
         case 'tiempoCS':
-            message.reply(showRemaining(tiempoCS));
+            message.reply(showRemaining(fechaCS));
             break;
 
         case 'darkness':
