@@ -40,18 +40,22 @@ function getList(list, key) {
             'content-type': 'application/x-www-form-urlencoded' 
         } 
     };
+    
+    var list = {}
 
     request(options, function (error, response, body) {
         if (error) throw new Error(error);
 
-        console.log(body)
+        list = body['trabajos'];
 
     });
+
+    return list;
 }
 
 bot.on("ready", function () {
 	console.log("Ready to begin!")
-    getList("bdadcec", "JorgeEsGay")
+    console.log(getList("bdadcec", "JorgeEsGay"))
 });
 
 bot.on("message", message => {
