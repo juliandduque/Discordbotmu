@@ -27,6 +27,14 @@ bot.on("message", message =>
             message.reply("pong");
             break;
 
+        case 'help':
+            message.reply("Misc: ping, ayuda, goodbot, duqueesmarika\ndarkness {server} //reporta la muerte del god y en 4 horas sale mensaje de ventana abierta\nelite {server} //reporta la muerte de los elite y en 11 horas 55 min horas avisa que van a salir");
+            break;
+        
+        case 'ayuda':
+            message.reply("Te ayudare a aprender ingles, insecto.");
+            break;
+
         case 'goodbot':
             message.reply("la geta pirobo");
             break;
