@@ -28,9 +28,9 @@ bot.on("message", message =>
             break;
 
         case 'help':
-            var response = "\n```Misc: ping, ayuda, goodbot,duqueesmarika\
-                            \ndarkness {server} //reporta la muerte del god y en 4 horas sale mensaje de ventana abierta\
-                            \nelite {server} //reporta la muerte de los elite y en 11 horas 55 min horas avisa que van a salir```"
+            var response = "\n```- ping, ayuda, goodbot,duqueesmarika // me obliga a decir huevadas\
+                            \n- darkness {server} //reporta la muerte del god y en 4 horas sale mensaje de ventana abierta\
+                            \n- elite {server} //reporta la muerte de los elite y en 11 horas 55 min horas avisa que van a salir```"
             message.reply(response); 
             break;
         
