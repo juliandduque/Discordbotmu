@@ -1,6 +1,6 @@
 
 const Discord = require('discord.js');
-const request = require("https");
+const http = require("https");
 const bot = new Discord.Client();
 var fechaCS = new Date("May 26, 2020 20:00:00-05:00");
 var fechaArkaWar = new Date("May 27, 2020 21:00:00-05:00");
@@ -29,16 +29,17 @@ function showRemaining(timeto, frequency) {
     }
 
 function getList(list, key) {
+
     var options = {
-      "method": "GET",
-      "hostname": "extendsclass.com",
-      "port": null,
-      "path": "/api/json-storage/bin/bdadcec",
-      "headers": {
-        "content-type": "application/x-www-form-urlencoded",
-        "security-key": "JorgeEsGay",
-        "cache-control": "no-cache"
-      }
+        "method": "GET",
+        "hostname": "extendsclass.com",
+        "port": null,
+        "path": "/api/json-storage/bin/bdadcec",
+        "headers": {
+            "content-type": "application/x-www-form-urlencoded",
+            "security-key": "JorgeEsGay",
+            "cache-control": "no-cache"
+        }
     };
     
     var req = http.request(options, function (res) {
@@ -50,8 +51,9 @@ function getList(list, key) {
         });
 
         res.on("end", function () {
-        var body = Buffer.concat(chunks);
-        console.log(body.toString());
+            var body = Buffer.concat(chunks);
+            console.log(body.toString());
+            return body.toString();
         });
     });
 }
