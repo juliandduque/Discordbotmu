@@ -177,6 +177,7 @@ bot.on("message", message => {
                 {
                     respuesta += 'Piloto: ' + key + ' Personaje: ' + body[key]['personaje'] + ' Raza: ' + body[key]['raza'] + ' Guild: ' + body[key]['guild'] + ' Radiance: ' + body[key]['radiance']
 				}
+                console.log(respuesta)
                 message.reply(respuesta + "```");
             });
 
