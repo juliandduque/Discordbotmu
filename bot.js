@@ -25,7 +25,7 @@ bot.on("message", message =>
 	
     switch (command) 
     {       
-        case 'god of darkness':
+        case 'darkness':
             
             var server = 1
             
