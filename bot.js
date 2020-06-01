@@ -28,30 +28,6 @@ function showRemaining(timeto, frequency) {
     return days + " dias, " + hours + " horas, " + minutes + " minutos, " + seconds + " segundos"
     }
 
-function getList(list, key) {
-    var options = { 
-        method: 'GET',
-        url: 'https://extendsclass.com/api/json-storage/bin/' + list,
-
-        headers: 
-        { 
-            'cache-control': 'no-cache',
-            'security-key': key,
-            'content-type': 'application/x-www-form-urlencoded' 
-        } 
-    };
-    
-    var json = ''
-
-    request(options, function (error, response, body) {
-        if (error) throw new Error(error);
-        var json = JSON.parse(body)
-        console.log(json)
-    });
-
-    return json;
-}
-
 bot.on("ready", function () {
 	console.log("Ready to begin!")
     console.log(getList("bdadcec", "JorgeEsGay"))
@@ -169,8 +145,27 @@ bot.on("message", message => {
             }, 43500000);
             
             break;  
+
+        case 'lista':
             
-    }
-});
+            var options = { 
+                method: 'GET',
+                url: 'https://extendsclass.com/api/json-storage/bin/' + 'ebbabad',
+                headers: 
+                { 
+                    'cache-control': 'no-cache',
+                    'security-key': 'JorgeEsGay',
+                    'content-type': 'application/x-www-form-urlencoded' 
+                } 
+            };
+
+            request(options, function (error, response, body) {
+                if (error) throw new Error(error);
+                var json = JSON.parse(body)
+                message.reply(json.CS);
+                break;
+            });
+            
+            
 
 bot.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
