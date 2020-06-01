@@ -140,7 +140,11 @@ bot.on("message", message => {
             
         case 'lista':
 
-            if (args.length < 2) message.reply('Porfavor indica la lista. (cs, arka, iwc) ');
+            if (args.length < 2)
+            {
+                message.reply('Porfavor indica la lista. (cs, arka, iwc) ');
+                break;
+            }
             
             var lista = args[1]
 
@@ -168,7 +172,7 @@ bot.on("message", message => {
 
             request(options, function (error, response, body) {
                 if (error) throw new Error(error);
-                message.reply(JSON.stringify(JSON.parse(body),null,2));
+                message.reply(body);
             });
 
             break;
