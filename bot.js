@@ -16,7 +16,7 @@ bot.on("message", message =>
     if (message.author.bot) return;
 	
     // The process.env.PREFIX is your bot's prefix in this case.
-    if (message.content.indexOf('!') !== 0) return;
+    if (message.content.indexOf('?') !== 0) return;
     
     var args = message.content.substring(1).split(' ')
     var command = args[0];
