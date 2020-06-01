@@ -144,10 +144,8 @@ bot.on("message", message => {
             }, 43500000);
             
             break;  
-
-
     }
-}
+});
             
            
 bot.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
