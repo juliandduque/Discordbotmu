@@ -172,7 +172,12 @@ bot.on("message", message => {
 
             request(options, function (error, response, body) {
                 if (error) throw new Error(error);
-                message.reply(body);
+                var respuesta = "```";
+                for(var key in body)
+                {
+                    respuesta += 'Piloto: ' + key + ' Personaje: ' + body[key]['personaje'] + ' Raza: ' + body[key]['raza'] + ' Guild: ' + body[key]['guild'] + ' Radiance: ' + body[key]['radiance']
+				}
+                message.reply(respuesta + "```");
             });
 
             break;
