@@ -29,19 +29,24 @@ function showRemaining(timeto, frequency) {
     }
 
 function getList(list, key) {
-    var options = { method: 'GET',
-    url: 'https://extendsclass.com/api/json-storage/bin/' + list,
+    var options = { 
+        method: 'GET',
+        url: 'https://extendsclass.com/api/json-storage/bin/' + list,
 
-    headers: 
-    { 
-        'cache-control': 'no-cache',
-        'security-key': key,
-        'content-type': 'application/x-www-form-urlencoded' } 
+        headers: 
+        { 
+            'cache-control': 'no-cache',
+            'security-key': key,
+            'content-type': 'application/x-www-form-urlencoded' 
+        } 
     };
 
     request(options, function (error, response, body) {
         if (error) throw new Error(error);
-        
+        console.log(response)
+        console.log(error)
+        console.log(body)
+
         return body;
     });
 }
