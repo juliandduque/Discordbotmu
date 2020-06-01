@@ -44,13 +44,14 @@ function getList(list, key) {
     request(options, function (error, response, body) {
         if (error) throw new Error(error);
 
-        return body;
+        console.log(body)
+
     });
 }
 
 bot.on("ready", function () {
 	console.log("Ready to begin!")
-    console.log(getList("bdadcec", "JorgeEsGay"))
+    getList("bdadcec", "JorgeEsGay")
 });
 
 bot.on("message", message => {
