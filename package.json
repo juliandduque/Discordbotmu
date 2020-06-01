@@ -1,10 +1,24 @@
 {
-  "name": "Darkness",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.2.0",
+  "description": "A sample Node.js app using Express 4",
   "main": "bot.js",
-  "author": "BLACKWATER",
+  "scripts": {
+    "start": "node bot.js"
+  },
   "dependencies": {
+    "ajax-request": "^1.2.1",
     "discord.js": "^7.0.1",
-  }
+    "express": "^4.13.3",
+    "get-json": "0.0.3",
+    "jquery": "^2.2.4"
+  },
+  "engines": {
+    "node": "4.0.0"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
 }
