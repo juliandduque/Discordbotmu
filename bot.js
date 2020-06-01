@@ -42,7 +42,7 @@ function getList(key, list) {
     request(options, function (error, response, body) {
         if (error) throw new Error(error);
         
-        return body;
+        return response;
     });
 }
 
