@@ -62,11 +62,11 @@ bot.on("message", message =>
                 server = args[1]
             }
             
-            message.reply('Muerte de God of Darkness reportada en server: ' + server);
+            message.reply('Muerte de Elites reportada en server: ' + server);
 
             setTimeout(function () 
             {
-                message.reply('Boss elite salen en 5 minutos en el server ' + server + ' @here');
+                message.reply('Elites salen en 5 minutos en el server ' + server + ' @here');
             }, 43500000);
             
             break;  
