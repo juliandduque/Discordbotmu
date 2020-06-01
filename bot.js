@@ -1,13 +1,12 @@
-var Discord = require('discord.io');
+const Discord = require('discord.js');
 
-// Initialize Discord Bot
-var bot = new Discord.Client();
+const bot = new Discord.Client();
 
 bot.on("ready", function () {
 	console.log("Ready to begin! Serving in " + bot.channels.length + " channels");
 });
 
-client.on("message", message => 
+bot.on("message", message => 
 {
     if (message.author.bot) return;
 	
@@ -66,4 +65,4 @@ client.on("message", message =>
     }
 });
 
-client.login(process.env.CLIENT_TOKEN);//BOT_TOKEN is the Client Secret
+bot.login(process.env.CLIENT_TOKEN);//BOT_TOKEN is the Client Secret
