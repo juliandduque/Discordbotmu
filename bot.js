@@ -41,16 +41,15 @@ function getList(list, key) {
         } 
     };
     
-    var list = {}
+    var json = ''
 
     request(options, function (error, response, body) {
         if (error) throw new Error(error);
-        console.log(body)
-        list = body
-
+        var json = JSON.parse(body)
+        console.log(json)
     });
 
-    return list;
+    return json;
 }
 
 bot.on("ready", function () {
