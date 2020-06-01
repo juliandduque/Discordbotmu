@@ -48,7 +48,7 @@ function getList(key, list) {
 
 bot.on("ready", function () {
 	console.log("Ready to begin!")
-    console.log(getList("bdadcec", JorgeEsGay))
+    console.log(getList("bdadcec", "JorgeEsGay"))
 });
 
 bot.on("message", message => {
