@@ -60,7 +60,7 @@ bot.on("message", message =>
             break;
 
         case 'help':
-            var response = "\n```- ping, pong, ayuda, goodbot, comoingresargremory, duqueesmarika, amyesmarika, ruler, arkanthosesmarika, rulozeroesmarika, magaoscuraesmarika // me obliga a decir huevadas\
+            var response = "\n```- ping, pong, ayuda, goodbot, comoingresargremory, duqueesmarika, amyesmarika, ruleresmarika, arkanthosesmarika, rulozeroesmarika, magaoscuraesmarika // me obliga a decir huevadas\
                             \n- tiempoCS //reporta cuanto falta para el CS\
                             \n- tiempoArka //reporta cuanto falta para el Arka\
                             \n- tiempoIWC //reporta cuanto falta para el Ice Wind Castle \
@@ -97,8 +97,8 @@ bot.on("message", message =>
             message.reply("Y tiene pene");
             break;
 
-        case 'ruler':
-            message.reply("Wolax");
+        case 'ruleresmarika':
+            message.reply("Tu comentario mato a sebasvarg de reflejo");
             break;
 
         case 'tiempoCS':
