@@ -10,7 +10,7 @@
     "discord.js": "^7.0.1",
     "express": "^4.13.3",
     "get-json": "0.0.3",
-    "jquery": "^2.2.4"
+    "jquery": "^3.5.1"
   },
   "engines": {
     "node": "4.0.0"
