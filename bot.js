@@ -26,9 +26,15 @@ bot.on("message", message =>
         case 'ping':
             message.reply("pong");
             break;
+
         case 'goodbot':
             message.reply("la geta pirobo");
             break;
+
+        case 'duqueesmarika':
+            message.reply("Si lo fuera me lo como.");
+            break;
+
         case 'darkness':
             
             var server = 1
