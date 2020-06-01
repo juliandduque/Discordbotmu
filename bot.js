@@ -30,7 +30,6 @@ function showRemaining(timeto, frequency) {
 
 bot.on("ready", function () {
 	console.log("Ready to begin!")
-    console.log(getList("bdadcec", "JorgeEsGay"))
 });
 
 bot.on("message", message => {
