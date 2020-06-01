@@ -43,9 +43,6 @@ function getList(list, key) {
 
     request(options, function (error, response, body) {
         if (error) throw new Error(error);
-        console.log(response)
-        console.log(error)
-        console.log(body)
 
         return body;
     });
