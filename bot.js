@@ -177,8 +177,8 @@ bot.on("message", message => {
             break;
 
          case 'registrar':
-         \
-            if (args.length < 2) message.reply('Usa este formato: ?registrar {evento (cs, arka, iwc)} {personaje} {raza} {radiance} {guild}');
+         
+            if (args.length < 6) message.reply('Usa este formato: ?registrar {evento (cs, arka, iwc)} {personaje} {raza} {radiance} {guild}');
 
             var options = { 
                 method: 'PATCH',
