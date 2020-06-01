@@ -164,6 +164,7 @@ bot.on("message", message => {
                 message.reply(json.CS);
                 break;
             });
+    }
             
             
 
