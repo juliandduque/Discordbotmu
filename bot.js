@@ -46,7 +46,7 @@ bot.on("message", message =>
             
             var server = 1
             
-            if (args.length > 2)
+            if (args.length > 1)
             {
                 server = args[1]
             }
@@ -64,7 +64,7 @@ bot.on("message", message =>
             
             var server = 1
             
-            if (args.length > 2)
+            if (args.length > 1)
             {
                 server = args[1]
             }
