@@ -52,7 +52,7 @@ bot.on("message", message =>
             break;
 
         case 'help':
-            var response = "\n```- ping, ayuda, goodbot, duqueesmarika, amyesmarika, ruler // me obliga a decir huevadas\
+            var response = "\n```- ping, ayuda, goodbot, duqueesmarika, amyesmarika, ruler, arkanthosesmarika, rulozeroesmarika, magaoscuraesmarika // me obliga a decir huevadas\
                             \n- tiempoCS //reporta cuanto falta para el CS\
                             \n- tiempoArka //reporta cuanto falta para el Arka\
                             \n- tiempoIWC //reporta cuanto falta para el Ice Wind Castle \
@@ -73,8 +73,20 @@ bot.on("message", message =>
             message.reply("Si lo fuera me lo como.");
             break;
 
+        case 'arkanthosesmarika':
+            message.reply("xd");
+            break;
+
         case 'amyesmarika':
             message.reply("Si pero solo le gusta dar a los claymore.");
+            break
+            ;
+        case 'rulozeroesmarika':
+            message.reply("Si el es marika todos aca somos unas floresitas hermosas.");
+            break;
+        
+        case 'magaoscuraesmarika':
+            message.reply("Y tiene pene");
             break;
 
         case 'ruler':
