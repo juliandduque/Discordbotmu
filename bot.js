@@ -165,6 +165,7 @@ bot.on("message", message => {
             }
             console.log(body)
             console.log(http)
+            console.log(tabla)
 
             http = require('http');
 
