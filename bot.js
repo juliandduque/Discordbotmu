@@ -168,7 +168,7 @@ bot.on("message", message => {
 
             let listarequest= http.get({
                 host: 'extendsclass.com',
-                path: '/api/json-storage/bin/' + tabla + ''+'?stuff='+ Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);,
+                path: '/api/json-storage/bin/' + tabla + ''+'?stuff='+ Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15),
                 headers: 
                 { 
                     'security-key': 'JorgeEsGay',
@@ -182,7 +182,6 @@ bot.on("message", message => {
                 response.on('end', function() {
 
                     // Data reception is done, do whatever with it!
-                    console.log(response)
                     console.log(body)
 
                     let parsedResponse = JSON.parse(body)
