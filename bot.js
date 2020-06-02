@@ -267,8 +267,6 @@ bot.on("message", message => {
             }));
 
             req.end();
-
-            break;
     }
 });
             
