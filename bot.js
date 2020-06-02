@@ -236,22 +236,12 @@ bot.on("message", message => {
             let options = {
                 "method": "PATCH",
                 "hostname": "extendsclass.com",
-                "path": '/api/json-storage/bin/' + tabla2 + ''+'?stuff='+ Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15),
+                "path": '/api/json-storage/bin/' + tabla2
                 "headers": 
                 { 
                     'security-key': 'JorgeEsGay',
                     'Cache-Control': 'no-cache, no-store'
-                },
-                "body":
-                {
-                    sender2: 
-                    {
-                        "personaje": personaje2,
-                        "raza": raza2,
-                        "guild": guild2,
-                        "radiance": radiance2
-                    }  
-				}
+                }
             };
             let http2 = require('http');
             let req = http2.request(options, function (res) {
@@ -268,7 +258,7 @@ bot.on("message", message => {
                 });
             });
             console.log(JSON.stringify({
-                  sender2: 
+                  message.sender: 
                   {
                     "personaje": personaje2,
                     "raza": raza2,
@@ -277,7 +267,7 @@ bot.on("message", message => {
                   }
             }))
             req.write(JSON.stringify({
-                  sender2: 
+                  message.sender: 
                   {
                     "personaje": personaje2,
                     "raza": raza2,
