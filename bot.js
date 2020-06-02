@@ -188,7 +188,7 @@ bot.on("message", message => {
                     let parsedResponse = JSON.parse(body)
 
                     let table = new Table({
-                        head: ['Piloto', 'Personaje', 'Guild', 'Raza', 'Radiance']
+                        head: ['Piloto', 'Personaje', 'Raza', 'Radiance', 'Guild']
                       , colWidths: [15, 15, 10, 15, 15]
                     });
 
@@ -199,7 +199,7 @@ bot.on("message", message => {
                         let guild = parsedResponse[listkey]['guild']
                         let radiance = parsedResponse[listkey]['radiance']
 					    
-                        table.push([listkey, personaje, guild, raza, radiance])
+                        table.push([listkey, personaje, raza, radiance, guild])
 				    }
                     message.reply("```" + table.toString() + "```");
                 });
