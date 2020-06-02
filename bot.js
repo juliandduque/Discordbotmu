@@ -187,11 +187,9 @@ bot.on("message", message => {
 
                     let parsedResponse = JSON.parse(body)
 
-                    let listrespuesta = '```'
-
                     let table = new Table({
                         head: ['Piloto', 'Personaje', 'Guild', 'Raza', 'Radiance']
-                      , colWidths: [10, 10, 5, 10, 10]
+                      , colWidths: [20, 20, 10, 20, 20]
                     });
 
                     for(let listkey in parsedResponse) 
@@ -200,17 +198,9 @@ bot.on("message", message => {
                         let raza = parsedResponse[listkey]['raza']
                         let guild = parsedResponse[listkey]['guild']
                         let radiance = parsedResponse[listkey]['radiance']
-
-                        listrespuesta += '\n Piloto: ' + listkey
-                        listrespuesta += '     Personaje:' + personaje 
-                        listrespuesta += '     Raza: ' + raza 
-                        listrespuesta += '     Guild: ' + guild
-                        listrespuesta += '     Radiance: ' + radiance
 					    
                         table.push([listkey, personaje, raza, guild, radiance])
 				    }
-
-                    message.reply(listrespuesta + "```");
                     message.reply("```" + table.toString() + "```");
                 });
             });
