@@ -166,7 +166,7 @@ bot.on("message", message => {
 
             http = require('http');
 
-            http.get({
+            let listarequest= http.get({
                 host: 'extendsclass.com',
                 path: '/api/json-storage/bin/' + tabla,
                 headers: 
@@ -182,6 +182,7 @@ bot.on("message", message => {
                 response.on('end', function() {
 
                     // Data reception is done, do whatever with it!
+                    console.log(response)
                     console.log(body)
 
                     let parsedResponse = JSON.parse(body)
@@ -209,6 +210,7 @@ bot.on("message", message => {
                     message.reply(listrespuesta + "```");
                 });
             });
+            listarequest.shouldKeepAlive = false
             break;
     
         case 'registrar':
