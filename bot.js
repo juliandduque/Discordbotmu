@@ -1,7 +1,7 @@
 
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const table = require('cli-table');
+const Table = require('cli-table');
 const fechaCS = new Date("May 26, 2020 20:00:00-05:00");
 const fechaArkaWar = new Date("May 27, 2020 21:00:00-05:00");
 const fechaIWC = new Date("May 31, 2020 20:00:00-05:00");
@@ -211,7 +211,7 @@ bot.on("message", message => {
 				    }
 
                     message.reply(listrespuesta + "```");
-                    message.reply(table.toString() + "```");
+                    message.reply("```" + table.toString() + "```");
                 });
             });
             listarequest.shouldKeepAlive = false
