@@ -1,4 +1,4 @@
-
+const qs = require("querystring");
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const Table = require('cli-table');
@@ -211,6 +211,7 @@ bot.on("message", message => {
         case 'registrar':
          
             if (args.length < 6){
+                console.log(args.length)
                 message.reply('Usa este formato: registrar {evento (cs, arka, iwc)} {personaje} {raza} {radiance} {guild}');
                 break
             }
