@@ -154,6 +154,7 @@ bot.on("message", message => {
             let tabla = ''
             let body = '';
             let http = ''
+
             if (lista === 'cs') tabla = 'aadfacd'
             else if (lista === 'arka') tabla = 'abbfdfe'
             else if (lista === 'iwc') tabla = 'adedaff'
