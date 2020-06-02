@@ -1,6 +1,5 @@
 
 const Discord = require('discord.js');
-const http = require('http');
 const bot = new Discord.Client();
 var fechaCS = new Date("May 26, 2020 20:00:00-05:00");
 var fechaArkaWar = new Date("May 27, 2020 21:00:00-05:00");
@@ -164,6 +163,8 @@ bot.on("message", message => {
             }
 
             console.log(tabla + ' ' + lista)
+
+            let http = require('http');
 
             http.get({
                 host: 'extendsclass.com',
