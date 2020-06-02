@@ -179,16 +179,23 @@ bot.on("message", message => {
                 {
                     if(parsedResponse.hasOwnProperty(key))
                     {
+                        respuesta += '\n Piloto: ' + key
+
                         var personaje = parsedResponse[key]['personaje']
                         console.log(personaje)
+                        respuesta += '     Personaje:' + personaje 
+
                         var raza = parsedResponse[key]['raza']
                         console.log(raza)
+                        respuesta += '     Raza: ' + raza 
+
                         var guild = parsedResponse[key]['guild']
                         console.log(guild)
+                        respuesta += '     Guild: ' + guild
+
                         var radiance = parsedResponse[key]['radiance']
                         console.log(radiance)
-
-                        respuesta += '\nPiloto: ' + key + '     Personaje:'+ personaje + '     Raza: ' + raza + '     Guild: ' + guild + '     Radiance: ' + radiance
+                        respuesta += '     Radiance: ' + radiance
 					}
 				}
                 console.log(respuesta)
@@ -197,47 +204,6 @@ bot.on("message", message => {
 
             break;
 
-         case 'registrar':
-         
-            if (args.length < 6)
-            {
-                message.reply('Usa este formato: ?registrar {evento (cs, arka, iwc)} {personaje} {raza} {radiance} {guild}');
-                break;
-            }
-
-            var lista = args[1]
-            if (lista === 'cs') tabla = 'aadfacd'
-            else if (lista === 'arka') tabla = 'abbfdfe'
-            else if (lista === 'iwc') tabla = 'adedaff'
-            else
-            {
-                message.reply('Solo se permite lista cs, arka, o iwc ');
-                break;
-            }
-
-            var sender = message.sender
-            var personaje = args[2]
-            var raza = args[3]
-            var radiance = args[4]
-            var guild = args[5]
-
-            var options = { 
-                method: 'PATCH',
-                url: 'https://extendsclass.com/api/json-storage/bin/' + tabla,
-                headers: 
-                { 
-                    'cache-control': 'no-cache',
-                    'security-key': 'JorgeEsGay',
-                    'content-type': 'application/x-www-form-urlencoded' 
-                } 
-            };
-
-            request(options, function (error, response, body) {
-                if (error) return;
-                message.reply(JSON.stringify(JSON.parse(body),null,2));
-            });
-
-            break;
     }
 });
             
