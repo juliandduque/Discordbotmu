@@ -142,7 +142,78 @@ bot.on("message", message => {
             }, 43500000);
             
             break; 
-            
+        
+        case 'lista':
+
+            if (args.length < 2)
+            {
+                message.reply('Porfavor indica la lista. (cs, arka, iwc) ');
+                break;
+            }
+
+            let lista = args[1]
+            let tabla = ''
+
+            if (lista === 'cs') tabla = 'aadfacd'
+            else if (lista === 'arka') tabla = 'abbfdfe'
+            else if (lista === 'iwc') tabla = 'adedaff'
+            else
+            {
+                message.reply('Solo se permite lista cs, arka, o iwc ');
+                break;
+            }
+
+            console.log(tabla + ' ' + lista)
+
+            let listareqoptions = { 
+                method: 'GET',
+                url: 'https://extendsclass.com/api/json-storage/bin/' + tabla,
+                headers: 
+                { 
+                    'security-key': 'JorgeEsGay',
+                    'cache-control': 'no-cache',
+                    'content-type': 'application/json' 
+                } 
+            };
+
+            request(listareqoptions, function (error, response, body) {
+                if (error) return;
+                console.log(body)
+
+                let parsedResponse = JSON.parse(body)
+                console.log(parsedResponse)
+
+                let listrespuesta = '```'
+
+                for(var listkey in parsedResponse)
+                {
+                    if(parsedResponse.hasOwnProperty(listkey))
+                    {
+                        console.log(listkey)
+                        listrespuesta += '\n Piloto: ' + listkey
+
+                        let personaje = parsedResponse[listkey]['personaje']
+                        console.log(personaje)
+                        listrespuesta += '     Personaje:' + personaje 
+
+                        let raza = parsedResponse[listkey]['raza']
+                        console.log(raza)
+                        listrespuesta += '     Raza: ' + raza 
+
+                        let guild = parsedResponse[listkey]['guild']
+                        console.log(guild)
+                        listrespuesta += '     Guild: ' + guild
+
+                        let radiance = parsedResponse[listkey]['radiance']
+                        let.log(radiance)
+                        listrespuesta += '     Radiance: ' + radiance
+					}
+				}
+                console.log(listrespuesta)
+                message.reply(listrespuesta + "```");
+            });
+
+            break;
         
 
     }
