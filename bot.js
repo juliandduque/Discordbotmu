@@ -176,7 +176,7 @@ bot.on("message", message => {
                 { 
                     'security-key': 'JorgeEsGay',
                     'Cache-Control': 'no-cache, no-store'
-                } 
+                }
             }, function(response) {
                 // Continuously update stream with data
                 response.on('data', function(chunk) {
@@ -237,7 +237,7 @@ bot.on("message", message => {
             let options = {
                 "method": "PATCH",
                 "hostname": "extendsclass.com",
-                "path": '/api/json-storage/bin/' + tabla2
+                "path": '/api/json-storage/bin/' + tabla2,
                 "headers": 
                 { 
                     'security-key': 'JorgeEsGay',
@@ -259,7 +259,7 @@ bot.on("message", message => {
                 });
             });
             console.log(JSON.stringify({
-                  message.sender: 
+                  message.sender + "": 
                   {
                     "personaje": personaje2,
                     "raza": raza2,
@@ -268,7 +268,7 @@ bot.on("message", message => {
                   }
             }))
             req.write(JSON.stringify({
-                  message.sender: 
+                  message.sender + "": 
                   {
                     "personaje": personaje2,
                     "raza": raza2,
