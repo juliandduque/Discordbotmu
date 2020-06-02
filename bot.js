@@ -1,6 +1,6 @@
 
 const Discord = require('discord.js');
-var http = require('http');
+const http = require('http');
 const bot = new Discord.Client();
 var fechaCS = new Date("May 26, 2020 20:00:00-05:00");
 var fechaArkaWar = new Date("May 27, 2020 21:00:00-05:00");
@@ -144,7 +144,6 @@ bot.on("message", message => {
             break; 
         
         case 'lista':
-            let request = require('request');
 
             if (args.length < 2)
             {
@@ -166,51 +165,61 @@ bot.on("message", message => {
 
             console.log(tabla + ' ' + lista)
 
-            let listareqoptions = { 
-                method: 'GET',
-                url: 'https://extendsclass.com/api/json-storage/bin/' + tabla,
+            http.get({
+                host: 'https://extendsclass.com/api/json-storage/bin',
+                path: '/tabla',
                 headers: 
                 { 
                     'security-key': 'JorgeEsGay',
                     'cache-control': 'no-cache',
                     'content-type': 'application/json' 
                 } 
-            };
+            }, function(response) {
+                // Continuously update stream with data
+                let body = '';
+                response.on('data', function(d) {
+                    body += d;
+                });
+                response.on('end', function() {
 
-            request(listareqoptions, function (error, response, body) {
-                if (error) return;
-                console.log(body)
+                    // Data reception is done, do whatever with it!
+                    let parsed = JSON.parse(body);
+                    callback({
 
-                let parsedResponse = JSON.parse(body)
-                console.log(parsedResponse)
+                         console.log(body)
 
-                let listrespuesta = '```'
+                        let parsedResponse = JSON.parse(body)
+                        console.log(parsedResponse)
 
-                for(var listkey in parsedResponse)
-                {
-                    console.log(listkey)
-                    listrespuesta += '\n Piloto: ' + listkey
+                        let listrespuesta = '```'
 
-                    let personaje = parsedResponse[listkey]['personaje']
-                    console.log(personaje)
-                    listrespuesta += '     Personaje:' + personaje 
+                        for(var listkey in parsedResponse)
+                        {
+                            console.log(listkey)
+                            listrespuesta += '\n Piloto: ' + listkey
 
-                    let raza = parsedResponse[listkey]['raza']
-                    console.log(raza)
-                    listrespuesta += '     Raza: ' + raza 
+                            let personaje = parsedResponse[listkey]['personaje']
+                            console.log(personaje)
+                            listrespuesta += '     Personaje:' + personaje 
 
-                    let guild = parsedResponse[listkey]['guild']
-                    console.log(guild)
-                    listrespuesta += '     Guild: ' + guild
+                            let raza = parsedResponse[listkey]['raza']
+                            console.log(raza)
+                            listrespuesta += '     Raza: ' + raza 
 
-                    let radiance = parsedResponse[listkey]['radiance']
-                    console.log(radiance)
-                    listrespuesta += '     Radiance: ' + radiance
+                            let guild = parsedResponse[listkey]['guild']
+                            console.log(guild)
+                            listrespuesta += '     Guild: ' + guild
+
+                            let radiance = parsedResponse[listkey]['radiance']
+                            console.log(radiance)
+                            listrespuesta += '     Radiance: ' + radiance
 					
-				}
-                console.log(listrespuesta)
+				        }
+                        console.log(listrespuesta)
 
-                message.reply(listrespuesta + "```");
+                        message.reply(listrespuesta + "```");
+                    });
+                });
             });
 
             break;
