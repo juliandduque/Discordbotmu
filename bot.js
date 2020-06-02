@@ -144,8 +144,7 @@ bot.on("message", message => {
         
         case 'lista':
 
-            if (args.length < 2)
-            {
+            if (args.length < 2){
                 message.reply('Porfavor indica la lista. (cs, arka, iwc) ');
                 break;
             }
@@ -158,13 +157,11 @@ bot.on("message", message => {
             if (lista === 'cs') tabla = 'aadfacd'
             else if (lista === 'arka') tabla = 'abbfdfe'
             else if (lista === 'iwc') tabla = 'adedaff'
-            else
-            {
+            else{
                 message.reply('Solo se permite lista cs, arka, o iwc ');
                 break;
             }
 
-            console.log(tabla + ' ' + lista)
 
             http = require('http');
 
@@ -189,33 +186,26 @@ bot.on("message", message => {
                     console.log(body)
 
                     let parsedResponse = JSON.parse(body)
-                    console.log(parsedResponse)
 
                     let listrespuesta = '```'
 
                     for(let listkey in parsedResponse)
                     {
-                        console.log(listkey)
                         listrespuesta += '\n Piloto: ' + listkey
 
                         let personaje = parsedResponse[listkey]['personaje']
-                        console.log(personaje)
                         listrespuesta += '     Personaje:' + personaje 
 
                         let raza = parsedResponse[listkey]['raza']
-                        console.log(raza)
                         listrespuesta += '     Raza: ' + raza 
 
                         let guild = parsedResponse[listkey]['guild']
-                        console.log(guild)
                         listrespuesta += '     Guild: ' + guild
 
                         let radiance = parsedResponse[listkey]['radiance']
-                        console.log(radiance)
                         listrespuesta += '     Radiance: ' + radiance
 					
 				    }
-                    console.log(listrespuesta)
 
                     message.reply(listrespuesta + "```");
                 });
