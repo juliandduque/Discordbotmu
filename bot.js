@@ -241,7 +241,7 @@ bot.on("message", message => {
                 { 
                     'security-key': 'JorgeEsGay',
                     'Cache-Control': 'no-cache, no-store'
-                }
+                },
                 "body":
                 {
                     sender2: 
