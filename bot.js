@@ -255,17 +255,17 @@ bot.on("message", message => {
                 res.on("end", function () {
                         let body2 = Buffer.concat(chunks);
                         console.log(body2)
-                        message.reply("Inscrito al evento: " + lista);
+                        message.reply("Inscrito al evento: " + lista2);
                 });
             });
             
             req.write(qs.stringify({
-                  sender: 
+                  sender2: 
                   {
-                    "personaje": personaje,
-                    "raza": raza,
-                    "guild": guild,
-                    "radiance": radiance
+                    "personaje": personaje2,
+                    "raza": raza2,
+                    "guild": guild2,
+                    "radiance": radiance2
                   }
             }));
 
