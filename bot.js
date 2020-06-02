@@ -253,20 +253,19 @@ bot.on("message", message => {
                         let body2 = Buffer.concat(chunks);
                         console.log(body2)
                         message.reply("Inscrito al evento: " + lista);
-                    });
                 });
-            }
-
-            req.write(qs.stringify(
-            {
-              sender: 
-              {
-                "personaje": personaje,
-                "raza": raza,
-                "guild": guild,
-                "radiance": radiance
-              }
+            });
+            
+            req.write(qs.stringify({
+                  sender: 
+                  {
+                    "personaje": personaje,
+                    "raza": raza,
+                    "guild": guild,
+                    "radiance": radiance
+                  }
             }));
+
             req.end();
 
             break;
