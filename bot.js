@@ -185,8 +185,6 @@ bot.on("message", message => {
                 response.on('end', function() {
 
                     // Data reception is done, do whatever with it!
-                    console.log(body)
-
                     let parsedResponse = JSON.parse(body)
 
                     let table = new Table({
