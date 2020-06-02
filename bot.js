@@ -1,6 +1,7 @@
 
 const Discord = require('discord.js');
 const bot = new Discord.Client();
+import Table from 'cli-table';
 const fechaCS = new Date("May 26, 2020 20:00:00-05:00");
 const fechaArkaWar = new Date("May 27, 2020 21:00:00-05:00");
 const fechaIWC = new Date("May 31, 2020 20:00:00-05:00");
