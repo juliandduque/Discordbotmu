@@ -116,9 +116,11 @@ bot.on("message", message => {
             
              message.reply('Muerte de God of Darkness reportada en server: ' + server);
 
+            var returner = 'Ventana del GOD abierta por 2 horas en server ' + server + ' @here'
+
             setTimeout(function () 
             {
-                message.reply(message, 'Ventana del god of darkness esta abierta por 2 horas en el server ' + server + ' @here');
+                message.reply(message, returner);
             }, 14400000);
             
             break;
@@ -131,9 +133,12 @@ bot.on("message", message => {
 
             message.reply('Muerte de Elites reportada en server: ' + server);
 
+            var returner = 'Elites salen en 5 minutos en el server ' + server + ' @here
+
             setTimeout(function () 
             {
-                message.reply('Elites salen en 5 minutos en el server ' + server + ' @here');
+                message.reply(returner);
+
             }, 43500000);
             
             break; 
