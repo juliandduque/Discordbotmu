@@ -159,6 +159,8 @@ bot.on("message", message => {
                 break;
             }
 
+            console.log(tabla + ' ' + lista)
+
             var options = { 
                 method: 'GET',
                 url: 'https://extendsclass.com/api/json-storage/bin/' + tabla,
