@@ -179,7 +179,11 @@ bot.on("message", message => {
                 {
                     if(parsedResponse.hasOwnProperty(key))
                     {
-                        respuesta += '\nPiloto: ' + key + '     Personaje:' + parsedResponse[key]['personaje'] + '     Raza: ' + parsedResponse[key]['raza'] + '     Guild: ' + parsedResponse[key]['guild'] + '     Radiance: ' + parsedResponse[key]['radiance']
+                        var personaje = parsedResponse[key]['personaje']
+                        var raza = parsedResponse[key]['raza']
+                        var guild = parsedResponse[key]['guild']
+                        var radiance = parsedResponse[key]['radiance']
+                        respuesta += '\nPiloto: ' + key + '     Personaje:'+ personaje + '     Raza: ' + raza + '     Guild: ' + guild + '     Radiance: ' + radiance
 					}
 				}
                 console.log(respuesta)
