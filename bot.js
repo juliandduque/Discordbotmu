@@ -37,8 +37,8 @@ bot.on("message", message => {
 	
     if (message.content.indexOf('?') !== 0) return;
     
-    var args = message.content.substring(1).split(' ')
-    var command = args[0];
+    let args = message.content.substring(1).split(' ')
+    let command = args[0];
     
     switch (command) 
     {
@@ -110,13 +110,13 @@ bot.on("message", message => {
 
         case 'darkness':
             
-            var server = 1
+            let server = 1
             
             if (args.length > 1) server = args[1]
             
-             message.reply('Muerte de God of Darkness reportada en server: ' + server);
+            message.reply('Muerte de God of Darkness reportada en server: ' + server);
 
-            var returner = 'Ventana del GOD abierta por 2 horas en server ' + server + ' @here'
+            let returner = 'Ventana del GOD abierta por 2 horas en server ' + server + ' @here';
 
             setTimeout(function () 
             {
@@ -127,13 +127,13 @@ bot.on("message", message => {
             
         case 'elite':
             
-            var server = 1
+            let server = 1
             
             if (args.length > 1) server = args[1]
 
             message.reply('Muerte de Elites reportada en server: ' + server);
 
-            var returner = 'Elites salen en 5 minutos en el server ' + server + ' @here
+            let returner = 'Elites salen en 5 minutos en el server ' + server + ' @here
 
             setTimeout(function () 
             {
