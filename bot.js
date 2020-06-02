@@ -184,47 +184,42 @@ bot.on("message", message => {
 
                     // Data reception is done, do whatever with it!
                     let parsed = JSON.parse(body);
-                    callback({
+                    console.log(body)
 
-                         console.log(body)
+                    let parsedResponse = JSON.parse(body)
+                    console.log(parsedResponse)
 
-                        let parsedResponse = JSON.parse(body)
-                        console.log(parsedResponse)
+                    let listrespuesta = '```'
 
-                        let listrespuesta = '```'
+                    for(var listkey in parsedResponse)
+                    {
+                        console.log(listkey)
+                        listrespuesta += '\n Piloto: ' + listkey
 
-                        for(var listkey in parsedResponse)
-                        {
-                            console.log(listkey)
-                            listrespuesta += '\n Piloto: ' + listkey
+                        let personaje = parsedResponse[listkey]['personaje']
+                        console.log(personaje)
+                        listrespuesta += '     Personaje:' + personaje 
 
-                            let personaje = parsedResponse[listkey]['personaje']
-                            console.log(personaje)
-                            listrespuesta += '     Personaje:' + personaje 
+                        let raza = parsedResponse[listkey]['raza']
+                        console.log(raza)
+                        listrespuesta += '     Raza: ' + raza 
 
-                            let raza = parsedResponse[listkey]['raza']
-                            console.log(raza)
-                            listrespuesta += '     Raza: ' + raza 
+                        let guild = parsedResponse[listkey]['guild']
+                        console.log(guild)
+                        listrespuesta += '     Guild: ' + guild
 
-                            let guild = parsedResponse[listkey]['guild']
-                            console.log(guild)
-                            listrespuesta += '     Guild: ' + guild
-
-                            let radiance = parsedResponse[listkey]['radiance']
-                            console.log(radiance)
-                            listrespuesta += '     Radiance: ' + radiance
+                        let radiance = parsedResponse[listkey]['radiance']
+                        console.log(radiance)
+                        listrespuesta += '     Radiance: ' + radiance
 					
-				        }
-                        console.log(listrespuesta)
+				    }
+                    console.log(listrespuesta)
 
-                        message.reply(listrespuesta + "```");
-                    });
+                    message.reply(listrespuesta + "```");
                 });
             });
 
             break;
-        
-
     }
 });
             
