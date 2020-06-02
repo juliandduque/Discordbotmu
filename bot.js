@@ -152,7 +152,7 @@ bot.on("message", message => {
 
             let lista = args[1]
             let tabla = ''
-
+            let body = '';
             if (lista === 'cs') tabla = 'aadfacd'
             else if (lista === 'arka') tabla = 'abbfdfe'
             else if (lista === 'iwc') tabla = 'adedaff'
@@ -176,10 +176,8 @@ bot.on("message", message => {
                 } 
             }, function(response) {
                 // Continuously update stream with data
-                let body = '';
                 response.on('data', function(d) {
                     body += d;
-                    console.log(d)
                 });
                 response.on('end', function() {
 
