@@ -78,7 +78,7 @@ bot.on("message", message => {
             break;
 
         case 'arkanthosesmarika':
-            message.reply("xd");
+            message.reply("y pollo, porque nuestros bks no pegan como los de alla?");
             break;
 
         case 'amyesmarika':
