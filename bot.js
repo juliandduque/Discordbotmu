@@ -144,6 +144,7 @@ bot.on("message", message => {
             break; 
         
         case 'lista':
+            let request = require('request');
 
             if (args.length < 2)
             {
