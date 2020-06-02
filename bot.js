@@ -222,7 +222,7 @@ bot.on("message", message => {
             break;
     
         case 'registrar':
-            message.reply("Que partes de no funciona aun no entiendes pirobo? ¿Que carajo acabas de decir sobre mi, pequeña perra? Te diré que me gradue como el mejor de mi clase en los Navy Seals, y he estado involucrado en numerosas incursiones secretas en Al-Quaeda, y tengo mas de 300 asesinatos confirmados. Estoy entrenado en la guerra de gorilas y soy el mejor francotirador de todas las fuerzas armadas de los Estados Unidos. Para mi no eres nada mas que otro objetivo. Te borrare con precision como nunca antes se habia visto en esta Tierra, marca mis malditas palabras.");
+            message.reply("Que partes de no funciona aun no entiendes pirobo? Que carajo acabas de decir sobre mi, pequenha perra? Te dire que me gradue como el mejor de mi clase en los Navy Seals, y he estado involucrado en numerosas incursiones secretas en Al-Quaeda, y tengo mas de 300 asesinatos confirmados. Estoy entrenado en la guerra de gorilas y soy el mejor francotirador de todas las fuerzas armadas de los Estados Unidos. Para mi no eres nada mas que otro objetivo. Te borrare con precision como nunca antes se habia visto en esta Tierra, marca mis malditas palabras.");
             
     }
 });
