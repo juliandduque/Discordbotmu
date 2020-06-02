@@ -263,8 +263,7 @@ bot.on("message", message => {
                 });
 
                 res.on("end", function () {
-                        let body2 = Buffer.concat(chunks);
-                        console.log(body2)
+                        console.log(chunks)
                         message.reply("Inscrito al evento: " + lista2);
                 });
             });
