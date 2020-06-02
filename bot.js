@@ -133,7 +133,7 @@ bot.on("message", message => {
 
             message.reply('Muerte de Elites reportada en server: ' + server);
 
-            let elitereturner = 'Elites salen en 5 minutos en el server ' + server + ' @here
+            let elitereturner = 'Elites salen en 5 minutos en el server ' + server + ' @here'
 
             setTimeout(function () 
             {
