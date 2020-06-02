@@ -161,6 +161,9 @@ bot.on("message", message => {
                 message.reply('Solo se permite lista cs, arka, o iwc ');
                 break;
             }
+            console.log(body)
+            console.log(http)
+
             http = require('http');
 
             http.get({
@@ -173,8 +176,8 @@ bot.on("message", message => {
                 } 
             }, function(response) {
                 // Continuously update stream with data
-                response.on('data', function(d) {
-                    body += d;
+                response.on('data', function(chunk) {
+                    body += chunk;
                 });
                 response.on('end', function() {
 
@@ -206,7 +209,6 @@ bot.on("message", message => {
                     message.reply(listrespuesta + "```");
                 });
             });
-
             break;
     
         case 'registrar':
