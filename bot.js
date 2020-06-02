@@ -166,8 +166,8 @@ bot.on("message", message => {
             console.log(tabla + ' ' + lista)
 
             http.get({
-                host: 'https://extendsclass.com/api/json-storage/bin',
-                path: '/tabla',
+                host: 'https://extendsclass.com',
+                path: '/api/json-storage/bin/tabla',
                 headers: 
                 { 
                     'security-key': 'JorgeEsGay',
