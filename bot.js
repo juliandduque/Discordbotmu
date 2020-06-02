@@ -179,6 +179,7 @@ bot.on("message", message => {
                 let body = '';
                 response.on('data', function(d) {
                     body += d;
+                    console.log(d)
                 });
                 response.on('end', function() {
 
