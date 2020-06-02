@@ -171,13 +171,15 @@ bot.on("message", message => {
 
             request(options, function (error, response, body) {
                 if (error) return;
-                console.log(body)
                 parsedResponse = JSON.parse(body)
                 console.log(parsedResponse)
                 respuesta = '```'
                 for(var key in parsedResponse)
                 {
-                    respuesta += '\nPiloto: ' + key + '     Personaje:' + parsedResponse[key]['personaje'] + '     Raza: ' + parsedResponse[key]['raza'] + '     Guild: ' + parsedResponse[key]['guild'] + '     Radiance: ' + parsedResponse[key]['radiance']
+                    if(parsedResponse.hasOwnProperty(key))
+                    {
+                        respuesta += '\nPiloto: ' + key + '     Personaje:' + parsedResponse[key]['personaje'] + '     Raza: ' + parsedResponse[key]['raza'] + '     Guild: ' + parsedResponse[key]['guild'] + '     Radiance: ' + parsedResponse[key]['radiance']
+					}
 				}
                 console.log(respuesta)
                 message.reply(respuesta + "```");
@@ -187,7 +189,11 @@ bot.on("message", message => {
 
          case 'registrar':
          
-            if (args.length < 6) message.reply('Usa este formato: ?registrar {evento (cs, arka, iwc)} {personaje} {raza} {radiance} {guild}');
+            if (args.length < 6)
+            {
+                message.reply('Usa este formato: ?registrar {evento (cs, arka, iwc)} {personaje} {raza} {radiance} {guild}');
+                break;
+            }
 
             var lista = args[1]
             if (lista === 'cs') tabla = 'aadfacd'
