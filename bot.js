@@ -60,6 +60,7 @@ bot.on("message", message => {
                             \n- tiempoArka //reporta cuanto falta para el Arka\
                             \n- tiempoIWC //reporta cuanto falta para el Ice Wind Castle \
                             \n- darkness {server} //reporta la muerte del god y en 4 horas sale mensaje de ventana abierta\
+                            \n- lista {evento (cs, arka, iwc)} // lista los participantes registrados para el evento \
                             \n- elite {server} //reporta la muerte de los elite y en 11 horas 55 min horas avisa que van a salir```"
             message.reply(helpresponse); 
             break;
@@ -146,7 +147,7 @@ bot.on("message", message => {
         case 'lista':
 
             if (args.length < 2){
-                message.reply('Porfavor indica la lista. (cs, arka, iwc) ');
+                message.reply('Usa este formato: lista {evento (cs, arka, iwc)} ');
                 break;
             }
 
@@ -208,8 +209,64 @@ bot.on("message", message => {
             break;
     
         case 'registrar':
-            message.reply("Que partes de no funciona aun no entiendes pirobo? Que carajo acabas de decir sobre mi, pequenha perra? Te dire que me gradue como el mejor de mi clase en los Navy Seals, y he estado involucrado en numerosas incursiones secretas en Al-Quaeda, y tengo mas de 300 asesinatos confirmados. Estoy entrenado en la guerra de gorilas y soy el mejor francotirador de todas las fuerzas armadas de los Estados Unidos. Para mi no eres nada mas que otro objetivo. Te borrare con precision como nunca antes se habia visto en esta Tierra, marca mis malditas palabras.");
-            
+         
+            if (args.length < 6) message.reply('Usa este formato: registrar {evento (cs, arka, iwc)} {personaje} {raza} {radiance} {guild}');
+
+            let lista = args[1]
+            if (lista === 'cs') tabla = 'aadfacd'
+            else if (lista === 'arka') tabla = 'abbfdfe'
+            else if (lista === 'iwc') tabla = 'adedaff'
+            else
+            {
+                message.reply('Solo se permite registrar a cs, arka, o iwc ');
+                break;
+            }
+
+            let sender = message.sender
+            let personaje = args[2]
+            let raza = args[3]
+            let radiance = args[4]
+            let guild = args[5]
+
+            let options = {
+                "method": "PATCH",
+                "hostname": "extendsclass.com",
+                "path": '/api/json-storage/bin/' + tabla + ''+'?stuff='+ Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15),
+                "headers": 
+                { 
+                    'security-key': 'JorgeEsGay',
+                    'Cache-Control': 'no-cache, no-store'
+                } 
+            };
+
+            let req = http.request(options, function (res) {
+
+                let chunks = '';
+
+                res.on("data", function (chunk) {
+                    chunks += chunk;
+                });
+
+                res.on("end", function () {
+                        let body = Buffer.concat(chunks);
+                        message.reply("Inscrito al evento: " + lista);
+                    });
+                });
+            }
+
+            req.write(qs.stringify(
+            {
+              sender: 
+              {
+                "personaje": personaje,
+                "raza": raza,
+                "guild": guild,
+                "radiance": radiance
+              }
+            }));
+            req.end();
+
+            break;
     }
 });
             
