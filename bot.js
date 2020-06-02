@@ -168,7 +168,7 @@ bot.on("message", message => {
                 path: '/api/json-storage/bin/' + tabla,
                 headers: 
                 { 
-                    'security-key': 'JorgeEsGay',,
+                    'security-key': 'JorgeEsGay',
                     'Cache-Control': 'no-store'
                 } 
             }, function(response) {
