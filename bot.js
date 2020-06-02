@@ -267,6 +267,18 @@ bot.on("message", message => {
                         message.reply("Inscrito al evento: " + lista2);
                 });
             });
+            
+            req.write(qs.stringify({
+                  sender2: 
+                  {
+                    "personaje": personaje2,
+                    "raza": raza2,
+                    "guild": guild2,
+                    "radiance": radiance2
+                  }
+            }));
+
+            req.end();
     }
 });
             
