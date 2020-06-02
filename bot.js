@@ -172,7 +172,6 @@ bot.on("message", message => {
                 headers: 
                 { 
                     'security-key': 'JorgeEsGay',
-                    'cache-control': 'no-cache',
                     'content-type': 'application/json' 
                 } 
             }, function(response) {
@@ -192,7 +191,7 @@ bot.on("message", message => {
 
                     let listrespuesta = '```'
 
-                    for(var listkey in parsedResponse)
+                    for(let listkey in parsedResponse)
                     {
                         console.log(listkey)
                         listrespuesta += '\n Piloto: ' + listkey
