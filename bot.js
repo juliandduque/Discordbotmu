@@ -167,6 +167,7 @@ bot.on("message", message => {
                 headers: 
                 { 
                     'security-key': 'JorgeEsGay',
+                    'cache-control': 'no-cache',
                     'content-type': 'application/x-www-form-urlencoded' 
                 } 
             };
@@ -174,13 +175,14 @@ bot.on("message", message => {
             request(options, function (error, response, body) {
                 if (error) return;
                 console.log(body)
-                parsedResponse = JSON.parse(body)
+                var parsedResponse = JSON.parse(body)
                 console.log(parsedResponse)
-                respuesta = '```'
+                var respuesta = '```'
                 for(var key in parsedResponse)
                 {
                     if(parsedResponse.hasOwnProperty(key))
                     {
+                        console.log(key)
                         respuesta += '\n Piloto: ' + key
 
                         var personaje = parsedResponse[key]['personaje']
