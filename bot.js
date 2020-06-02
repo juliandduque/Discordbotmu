@@ -180,10 +180,13 @@ bot.on("message", message => {
                     if(parsedResponse.hasOwnProperty(key))
                     {
                         var personaje = parsedResponse[key]['personaje']
+                        console.log(personaje)
                         var raza = parsedResponse[key]['raza']
+                        console.log(raza)
                         var guild = parsedResponse[key]['guild']
+                        console.log(guild)
                         var radiance = parsedResponse[key]['radiance']
-                        console.log('\nPiloto: ' + key + '     Personaje:'+ personaje + '     Raza: ' + raza + '     Guild: ' + guild + '     Radiance: ' + radiance)
+                        console.log(radiance)
 
                         respuesta += '\nPiloto: ' + key + '     Personaje:'+ personaje + '     Raza: ' + raza + '     Guild: ' + guild + '     Radiance: ' + radiance
 					}
