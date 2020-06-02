@@ -172,7 +172,7 @@ bot.on("message", message => {
                 headers: 
                 { 
                     'security-key': 'JorgeEsGay',
-                    'Cache-Control': 'no-store'
+                    'Cache-Control': 'no-cache, no-store'
                 } 
             }, function(response) {
                 // Continuously update stream with data
