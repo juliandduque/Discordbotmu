@@ -1,9 +1,9 @@
 
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-var fechaCS = new Date("May 26, 2020 20:00:00-05:00");
-var fechaArkaWar = new Date("May 27, 2020 21:00:00-05:00");
-var fechaIWC = new Date("May 31, 2020 20:00:00-05:00");
+const fechaCS = new Date("May 26, 2020 20:00:00-05:00");
+const fechaArkaWar = new Date("May 27, 2020 21:00:00-05:00");
+const fechaIWC = new Date("May 31, 2020 20:00:00-05:00");
 
 function showRemaining(timeto, frequency) {
 
@@ -161,8 +161,6 @@ bot.on("message", message => {
                 message.reply('Solo se permite lista cs, arka, o iwc ');
                 break;
             }
-
-
             http = require('http');
 
             http.get({
@@ -182,14 +180,13 @@ bot.on("message", message => {
                 response.on('end', function() {
 
                     // Data reception is done, do whatever with it!
-                    let parsed = JSON.parse(body);
                     console.log(body)
 
                     let parsedResponse = JSON.parse(body)
 
                     let listrespuesta = '```'
 
-                    for(let listkey in parsedResponse)
+                    for(let listkey in parsedResponse) 
                     {
                         listrespuesta += '\n Piloto: ' + listkey
 
