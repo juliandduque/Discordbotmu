@@ -277,7 +277,7 @@ bot.on("message", message => {
                     "radiance": radiance2
                   }
             }));
-
+            req.shouldKeepAlive = false;
             req.end();
     }
 });
