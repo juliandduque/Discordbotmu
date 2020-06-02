@@ -177,7 +177,7 @@ bot.on("message", message => {
                 respuesta = '```'
                 for(var key in parsedResponse)
                 {
-                    if(dictionary.hasOwnProperty(key))
+                    if(parsedResponse.hasOwnProperty(key))
                     {
                         respuesta += '\nPiloto: ' + key + '     Personaje:' + parsedResponse[key]['personaje'] + '     Raza: ' + parsedResponse[key]['raza'] + '     Guild: ' + parsedResponse[key]['guild'] + '     Radiance: ' + parsedResponse[key]['radiance']
 					}
