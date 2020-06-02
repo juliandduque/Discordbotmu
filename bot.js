@@ -228,7 +228,7 @@ bot.on("message", message => {
                 break;
             }
 
-            let sender2 = message.sender
+            let sender2 = message.author.username 
             let personaje2 = args[2]
             let raza2 = args[3]
             let radiance2 = args[4]
@@ -267,6 +267,7 @@ bot.on("message", message => {
 			}
             console.log(JSON.stringify(randomdict ))
             req.write(JSON.stringify(randomdict));
+
             req.shouldKeepAlive = false;
             req.end();
     }
