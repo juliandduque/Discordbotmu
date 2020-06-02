@@ -211,27 +211,29 @@ bot.on("message", message => {
         case 'registrar':
          
             if (args.length < 6) message.reply('Usa este formato: registrar {evento (cs, arka, iwc)} {personaje} {raza} {radiance} {guild}');
+            
+            let tabla2 = ''
 
-            let lista = args[1]
-            if (lista === 'cs') tabla = 'aadfacd'
-            else if (lista === 'arka') tabla = 'abbfdfe'
-            else if (lista === 'iwc') tabla = 'adedaff'
+            let lista2 = args[1]
+            if (lista2 === 'cs') tabla2 = 'aadfacd'
+            else if (lista2 === 'arka') tabla2 = 'abbfdfe'
+            else if (lista2 === 'iwc') tabla2 = 'adedaff'
             else
             {
                 message.reply('Solo se permite registrar a cs, arka, o iwc ');
                 break;
             }
 
-            let sender = message.sender
-            let personaje = args[2]
-            let raza = args[3]
-            let radiance = args[4]
-            let guild = args[5]
+            let sender2 = message.sender
+            let personaje2 = args[2]
+            let raza2 = args[3]
+            let radiance2 = args[4]
+            let guild2 = args[5]
 
             let options = {
                 "method": "PATCH",
                 "hostname": "extendsclass.com",
-                "path": '/api/json-storage/bin/' + tabla + ''+'?stuff='+ Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15),
+                "path": '/api/json-storage/bin/' + tabla2 + ''+'?stuff='+ Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15),
                 "headers": 
                 { 
                     'security-key': 'JorgeEsGay',
@@ -248,7 +250,8 @@ bot.on("message", message => {
                 });
 
                 res.on("end", function () {
-                        let body = Buffer.concat(chunks);
+                        let body2 = Buffer.concat(chunks);
+                        console.log(body2)
                         message.reply("Inscrito al evento: " + lista);
                     });
                 });
