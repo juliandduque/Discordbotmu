@@ -183,6 +183,8 @@ bot.on("message", message => {
                         var raza = parsedResponse[key]['raza']
                         var guild = parsedResponse[key]['guild']
                         var radiance = parsedResponse[key]['radiance']
+                        console.log('\nPiloto: ' + key + '     Personaje:'+ personaje + '     Raza: ' + raza + '     Guild: ' + guild + '     Radiance: ' + radiance)
+
                         respuesta += '\nPiloto: ' + key + '     Personaje:'+ personaje + '     Raza: ' + raza + '     Guild: ' + guild + '     Radiance: ' + radiance
 					}
 				}
