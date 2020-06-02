@@ -33,8 +33,8 @@ bot.on("ready", function () {
 });
 
 bot.on("message", message => {
+
     if (message.author.bot) return;
-	
     if (message.content.indexOf('?') !== 0) return;
     
     let args = message.content.substring(1).split(' ')
@@ -55,13 +55,13 @@ bot.on("message", message => {
             break;
 
         case 'help':
-            var response = "\n```- ping, pong, ayuda, goodbot, comoingresargremory, duqueesmarika, amyesmarika, ruleresmarika, arkanthosesmarika, rulozeroesmarika, magaoscuraesmarika // me obliga a decir huevadas\
+            var helpresponse = "\n```- ping, pong, ayuda, goodbot, comoingresargremory, duqueesmarika, amyesmarika, ruleresmarika, arkanthosesmarika, rulozeroesmarika, magaoscuraesmarika // me obliga a decir huevadas\
                             \n- tiempoCS //reporta cuanto falta para el CS\
                             \n- tiempoArka //reporta cuanto falta para el Arka\
                             \n- tiempoIWC //reporta cuanto falta para el Ice Wind Castle \
                             \n- darkness {server} //reporta la muerte del god y en 4 horas sale mensaje de ventana abierta\
                             \n- elite {server} //reporta la muerte de los elite y en 11 horas 55 min horas avisa que van a salir```"
-            message.reply(response); 
+            message.reply(helpresponse); 
             break;
         
         case 'ayuda':
@@ -110,34 +110,34 @@ bot.on("message", message => {
 
         case 'darkness':
             
-            let server = 1
+            let darknessserver = 1
             
-            if (args.length > 1) server = args[1]
+            if (args.length > 1) darknessserver = args[1]
             
             message.reply('Muerte de God of Darkness reportada en server: ' + server);
 
-            let returner = 'Ventana del GOD abierta por 2 horas en server ' + server + ' @here';
+            let darknessreturner = 'Ventana del GOD abierta por 2 horas en server ' + server + ' @here';
 
             setTimeout(function () 
             {
-                message.reply(message, returner);
+                message.reply(message, darknessreturner);
             }, 14400000);
             
             break;
             
         case 'elite':
             
-            let server = 1
+            let eliteserver = 1
             
-            if (args.length > 1) server = args[1]
+            if (args.length > 1) eliteserver = args[1]
 
             message.reply('Muerte de Elites reportada en server: ' + server);
 
-            let returner = 'Elites salen en 5 minutos en el server ' + server + ' @here
+            let elitereturner = 'Elites salen en 5 minutos en el server ' + server + ' @here
 
             setTimeout(function () 
             {
-                message.reply(returner);
+                message.reply(elitereturner);
 
             }, 43500000);
             
