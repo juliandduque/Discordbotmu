@@ -153,6 +153,7 @@ bot.on("message", message => {
             let lista = args[1]
             let tabla = ''
             let body = '';
+            let http = ''
             if (lista === 'cs') tabla = 'aadfacd'
             else if (lista === 'arka') tabla = 'abbfdfe'
             else if (lista === 'iwc') tabla = 'adedaff'
@@ -164,7 +165,7 @@ bot.on("message", message => {
 
             console.log(tabla + ' ' + lista)
 
-            let http = require('http');
+            http = require('http');
 
             http.get({
                 host: 'extendsclass.com',
@@ -173,7 +174,7 @@ bot.on("message", message => {
                 { 
                     'security-key': 'JorgeEsGay',
                     'content-type': 'application/json' ,
-                    'Cache-Control': 'no-cache'
+                    'Cache-Control': 'no-store'
                 } 
             }, function(response) {
                 // Continuously update stream with data
