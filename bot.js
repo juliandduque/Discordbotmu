@@ -1,6 +1,6 @@
 
 const Discord = require('discord.js');
-const request = require("request");
+var http = require('http');
 const bot = new Discord.Client();
 var fechaCS = new Date("May 26, 2020 20:00:00-05:00");
 var fechaArkaWar = new Date("May 27, 2020 21:00:00-05:00");
@@ -114,9 +114,9 @@ bot.on("message", message => {
             
             if (args.length > 1) darknessserver = args[1]
             
-            message.reply('Muerte de God of Darkness reportada en server: ' + server);
+            message.reply('Muerte de God of Darkness reportada en server: ' + darknessserver);
 
-            let darknessreturner = 'Ventana del GOD abierta por 2 horas en server ' + server + ' @here';
+            let darknessreturner = 'Ventana del GOD abierta por 2 horas en server ' + darknessserver + ' @here';
 
             setTimeout(function () 
             {
@@ -131,9 +131,9 @@ bot.on("message", message => {
             
             if (args.length > 1) eliteserver = args[1]
 
-            message.reply('Muerte de Elites reportada en server: ' + server);
+            message.reply('Muerte de Elites reportada en server: ' + eliteserver);
 
-            let elitereturner = 'Elites salen en 5 minutos en el server ' + server + ' @here'
+            let elitereturner = 'Elites salen en 5 minutos en el server ' + eliteserver + ' @here'
 
             setTimeout(function () 
             {
