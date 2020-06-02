@@ -267,7 +267,7 @@ bot.on("message", message => {
                         message.reply("Inscrito al evento: " + lista2);
                 });
             });
-            console.log(qs.stringify({
+            console.log(JSON.stringify({
                   sender2: 
                   {
                     "personaje": personaje2,
@@ -276,7 +276,7 @@ bot.on("message", message => {
                     "radiance": radiance2
                   }
             }))
-            req.write(qs.stringify({
+            req.write(JSON.stringify({
                   sender2: 
                   {
                     "personaje": personaje2,
