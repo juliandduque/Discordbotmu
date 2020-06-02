@@ -168,7 +168,7 @@ bot.on("message", message => {
                 { 
                     'security-key': 'JorgeEsGay',
                     'cache-control': 'no-cache',
-                    'content-type': 'application/x-www-form-urlencoded' 
+                    'content-type': 'application/json' 
                 } 
             };
 
