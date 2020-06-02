@@ -171,12 +171,13 @@ bot.on("message", message => {
 
             request(options, function (error, response, body) {
                 if (error) return;
+                console.log(body)
                 parsedResponse = JSON.parse(body)
                 console.log(parsedResponse)
                 respuesta = '```'
                 for(var key in parsedResponse)
                 {
-                    if(parsedResponse.hasOwnProperty(key))
+                    if(dictionary.hasOwnProperty(key))
                     {
                         respuesta += '\nPiloto: ' + key + '     Personaje:' + parsedResponse[key]['personaje'] + '     Raza: ' + parsedResponse[key]['raza'] + '     Guild: ' + parsedResponse[key]['guild'] + '     Radiance: ' + parsedResponse[key]['radiance']
 					}
