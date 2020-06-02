@@ -206,11 +206,12 @@ bot.on("message", message => {
                         listrespuesta += '     Guild: ' + guild
 
                         let radiance = parsedResponse[listkey]['radiance']
-                        let.log(radiance)
+                        console.log(radiance)
                         listrespuesta += '     Radiance: ' + radiance
 					}
 				}
                 console.log(listrespuesta)
+
                 message.reply(listrespuesta + "```");
             });
 
