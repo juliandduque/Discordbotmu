@@ -138,75 +138,7 @@ bot.on("message", message => {
             
             break; 
             
-        case 'lista':
-
-            if (args.length < 2)
-            {
-                message.reply('Porfavor indica la lista. (cs, arka, iwc) ');
-                break;
-            }
-            
-            var lista = args[1]
-
-            var tabla = ''
-
-            if (lista === 'cs') tabla = 'aadfacd'
-            else if (lista === 'arka') tabla = 'abbfdfe'
-            else if (lista === 'iwc') tabla = 'adedaff'
-            else
-            {
-                message.reply('Solo se permite lista cs, arka, o iwc ');
-                break;
-            }
-
-            console.log(tabla + ' ' + lista)
-
-            var options = { 
-                method: 'GET',
-                url: 'https://extendsclass.com/api/json-storage/bin/' + tabla,
-                headers: 
-                { 
-                    'security-key': 'JorgeEsGay',
-                    'cache-control': 'no-cache',
-                    'content-type': 'application/json' 
-                } 
-            };
-
-            request(options, function (error, response, body) {
-                if (error) return;
-                console.log(body)
-                var parsedResponse = JSON.parse(body)
-                console.log(parsedResponse)
-                var respuesta = '```'
-                for(var key in parsedResponse)
-                {
-                    if(parsedResponse.hasOwnProperty(key))
-                    {
-                        console.log(key)
-                        respuesta += '\n Piloto: ' + key
-
-                        var personaje = parsedResponse[key]['personaje']
-                        console.log(personaje)
-                        respuesta += '     Personaje:' + personaje 
-
-                        var raza = parsedResponse[key]['raza']
-                        console.log(raza)
-                        respuesta += '     Raza: ' + raza 
-
-                        var guild = parsedResponse[key]['guild']
-                        console.log(guild)
-                        respuesta += '     Guild: ' + guild
-
-                        var radiance = parsedResponse[key]['radiance']
-                        console.log(radiance)
-                        respuesta += '     Radiance: ' + radiance
-					}
-				}
-                console.log(respuesta)
-                message.reply(respuesta + "```");
-            });
-
-            break;
+        
 
     }
 });
