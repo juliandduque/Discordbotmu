@@ -258,24 +258,15 @@ bot.on("message", message => {
                         message.reply("Inscrito al evento: " + lista2);
                 });
             });
-            console.log(JSON.stringify({
-                  message.sender + "": 
-                  {
-                    "personaje": personaje2,
-                    "raza": raza2,
-                    "guild": guild2,
-                    "radiance": radiance2
-                  }
-            }))
-            req.write(JSON.stringify({
-                  message.sender + "": 
-                  {
-                    "personaje": personaje2,
-                    "raza": raza2,
-                    "guild": guild2,
-                    "radiance": radiance2
-                  }
-            }));
+            let randomdict = {}
+            randomdict[sender2] = {
+                "personaje": personaje2,
+                "raza": raza2,
+                "guild": guild2,
+                "radiance": radiance2
+			}
+            console.log(JSON.stringify(randomdict ))
+            req.write(JSON.stringify(randomdict));
             req.shouldKeepAlive = false;
             req.end();
     }
