@@ -210,7 +210,10 @@ bot.on("message", message => {
     
         case 'registrar':
          
-            if (args.length < 6) message.reply('Usa este formato: registrar {evento (cs, arka, iwc)} {personaje} {raza} {radiance} {guild}');
+            if (args.length < 6){
+                message.reply('Usa este formato: registrar {evento (cs, arka, iwc)} {personaje} {raza} {radiance} {guild}');
+                break
+            }
             
             let tabla2 = ''
 
@@ -218,8 +221,7 @@ bot.on("message", message => {
             if (lista2 === 'cs') tabla2 = 'aadfacd'
             else if (lista2 === 'arka') tabla2 = 'abbfdfe'
             else if (lista2 === 'iwc') tabla2 = 'adedaff'
-            else
-            {
+            else{
                 message.reply('Solo se permite registrar a cs, arka, o iwc ');
                 break;
             }
@@ -240,8 +242,8 @@ bot.on("message", message => {
                     'Cache-Control': 'no-cache, no-store'
                 } 
             };
-
-            let req = http.request(options, function (res) {
+            let http2 = require('http');
+            let req = http2.request(options, function (res) {
 
                 let chunks = '';
 
