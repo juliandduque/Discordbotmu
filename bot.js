@@ -189,25 +189,29 @@ bot.on("message", message => {
 
                     let listrespuesta = '```'
 
+                    let table = new Table({
+                        head: ['Piloto', 'Personaje', 'Guild', 'Raza', 'Radiance']
+                      , colWidths: [10, 10, 5, 10, 10]
+                    });
+
                     for(let listkey in parsedResponse) 
-                    {
-                        listrespuesta += '\n Piloto: ' + listkey
-
+                    {                        
                         let personaje = parsedResponse[listkey]['personaje']
-                        listrespuesta += '     Personaje:' + personaje 
-
                         let raza = parsedResponse[listkey]['raza']
-                        listrespuesta += '     Raza: ' + raza 
-
                         let guild = parsedResponse[listkey]['guild']
-                        listrespuesta += '     Guild: ' + guild
-
                         let radiance = parsedResponse[listkey]['radiance']
+
+                        listrespuesta += '\n Piloto: ' + listkey
+                        listrespuesta += '     Personaje:' + personaje 
+                        listrespuesta += '     Raza: ' + raza 
+                        listrespuesta += '     Guild: ' + guild
                         listrespuesta += '     Radiance: ' + radiance
-					
+					    
+                        table.push([listkey, personaje, raza, guild, radiance])
 				    }
 
                     message.reply(listrespuesta + "```");
+                    message.reply(table.toString() + "```");
                 });
             });
             listarequest.shouldKeepAlive = false
