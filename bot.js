@@ -5,6 +5,8 @@ const Table = require('cli-table');
 const fechaCS = new Date("May 26, 2020 20:00:00-05:00");
 const fechaArkaWar = new Date("May 27, 2020 21:00:00-05:00");
 const fechaIWC = new Date("May 31, 2020 20:00:00-05:00");
+const razas = [ "SM". "BK", "ELF", "MG", "DL", "SUM", "RF", "RW", "SL" ]
+const guilds = [ "GAMEOVER", "GREMORY", "GOLDCLAN"]
 
 function showRemaining(timeto, frequency) {
 
@@ -55,14 +57,12 @@ bot.on("message", message => {
             break;
 
         case 'help':
-            var helpresponse = "\n```- ping, pong, ayuda, goodbot, comoingresargremory, duqueesmarika, amyesmarika, ruleresmarika, arkanthosesmarika, rulozeroesmarika, magaoscuraesmarika // me obliga a decir huevadas\
-                            \n- tiempoCS //reporta cuanto falta para el CS\
-                            \n- tiempoArka //reporta cuanto falta para el Arka\
-                            \n- tiempoIWC //reporta cuanto falta para el Ice Wind Castle \
-                            \n- darkness {server} //reporta la muerte del god y en 4 horas sale mensaje de ventana abierta\
-                            \n- lista {evento (cs, arka, iwc)} // lista los participantes registrados para el evento \
-                            \n- registrar {evento (cs, arka, iwc)} {personaje} {raza} {radiance} {guild} // registra tu usuario de discord a un evento. Si ya esta registrado, reemplaza el registro viejo \
-                            \n- elite {server} //reporta la muerte de los elite y en 11 horas 55 min horas avisa que van a salir```"
+            var helpresponse = "\n```- ping, pong, ayuda, goodbot, comoingresargremory, duqueesmarika, amyesmarika, ruleresmarika, arkanthosesmarika, rulozeroesmarika, magaoscuraesmarika // me obliga a decir huevadas \
+                            \n- tiempoCS, tiempoArka, tiempoIWC //reporta cuanto falta para el event o\
+                            \n- lista {evento} // lista los participantes registrados para el evento \
+                            \n- registrar {evento} {personaje} {raza} {radiance} {guild} // registra tu usuario al evento \
+                            \n- darkness {server} //reporta la muerte del god y en 4 horas notifica \
+                            \n- elite {server} //reporta la muerte de los elite y en 11 horas 55 min notifica```"
             message.reply(helpresponse); 
             break;
         
@@ -164,9 +164,6 @@ bot.on("message", message => {
                 message.reply('Solo se permite lista cs, arka, o iwc ');
                 break;
             }
-            console.log(body)
-            console.log(http)
-            console.log(tabla)
 
             http = require('http');
 
@@ -243,16 +240,23 @@ bot.on("message", message => {
             else if (lista2 === 'arka') tabla2 = 'abbfdfe'
             else if (lista2 === 'iwc') tabla2 = 'adedaff'
             else{
-                message.reply('Solo se permite registrar a cs, arka, o iwc ');
+                message.reply('Solo se permiten estos eventos: cs, arka, o iwc ');
                 break;
             }
 
             let sender2 = message.author.username 
             let personaje2 = args[2]
-            let raza2 = args[3]
-            let radiance2 = args[4]
-            let guild2 = args[5]
+            let raza2 = args[3].toUpperCase()
+            let radiance2 = args[4]toLowerCase()
+            let guild2 = args[5]toUpperCase()
 
+            if( !razas.includes(raza2) ){
+                message.reply('Solo se permiten estas razas: ' + razas.toString())     
+			}
+
+            if( !guilds.includes(guild2) ){
+                message.reply('Solo se permiten estas guilds: ' + guilds.toString())     
+			}
             let options = {
                 "method": "PATCH",
                 "hostname": "extendsclass.com",
@@ -284,7 +288,7 @@ bot.on("message", message => {
                 "guild": guild2,
                 "radiance": radiance2
 			}
-            console.log(JSON.stringify(randomdict ))
+
             req.write(JSON.stringify(randomdict));
 
             req.shouldKeepAlive = false;
