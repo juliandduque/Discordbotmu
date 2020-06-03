@@ -189,7 +189,7 @@ bot.on("message", message => {
                     console.log(parsedResponse)
                     let tables = []
 
-                    let table = null
+                    var table = ''
                     let counter = 0
                     for(let listkey in parsedResponse) 
                     {      
