@@ -193,12 +193,12 @@ bot.on("message", message => {
                     let counter = 0
                     for(let listkey in parsedResponse) 
                     {      
-                        console.log(counter)
                         if(counter%6 === 0)
                         {
                             if (table)
                             {
-                                tables.push(table)
+                                console.log()
+                                tables.push(table.toString())
                             }
 
                             table = new Table({
@@ -216,12 +216,12 @@ bot.on("message", message => {
                         counter++;
 				    }
 
-                    tables.push(table)
+                    tables.push(table.toString())
 
                     for(let responsetable in tables)
                     {
-                        console.log(responsetable.toString())
-                        message.reply("```" + responsetable.toString() + "```");
+                        console.log(responsetable)
+                        message.reply("```" + responsetable) + "```");
 					}
                 });
             });
