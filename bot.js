@@ -196,9 +196,11 @@ bot.on("message", message => {
                         console.log(counter)
                         if(counter%10 === 0)
                         {
-                            if (table)tables.push(table)
-
-                            console.log(table.toString());
+                            if (table)
+                            {
+                                console.log(table.toString());
+                                tables.push(table)
+                            }
 
                             table = new Table({
                                 head: ['Piloto', 'Personaje', 'Raza', 'Radiance', 'Guild']
