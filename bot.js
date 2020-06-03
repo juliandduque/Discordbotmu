@@ -5,8 +5,8 @@ const Table = require('cli-table');
 const fechaCS = new Date("May 26, 2020 20:00:00-05:00");
 const fechaArkaWar = new Date("May 27, 2020 21:00:00-05:00");
 const fechaIWC = new Date("May 31, 2020 20:00:00-05:00");
-const razas = [ "SM". "BK", "ELF", "MG", "DL", "SUM", "RF", "RW", "SL" ]
-const guilds = [ "GAMEOVER", "GREMORY", "GOLDCLAN"]
+var razas = [ "SM". "BK", "ELF", "MG", "DL", "SUM", "RF", "RW", "SL" ]
+var guilds = [ "GAMEOVER", "GREMORY", "GOLDCLAN"]
 
 function showRemaining(timeto, frequency) {
 
