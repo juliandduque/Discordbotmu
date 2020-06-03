@@ -194,11 +194,10 @@ bot.on("message", message => {
                     for(let listkey in parsedResponse) 
                     {      
                         console.log(counter)
-                        if(counter%10 === 0)
+                        if(counter%6 === 0)
                         {
                             if (table)
-                            {
-                                console.log(table.toString());
+                            {}
                                 tables.push(table)
                             }
 
@@ -216,6 +215,9 @@ bot.on("message", message => {
                         table.push([listkey, personaje, raza, radiance, guild])
                         counter++;
 				    }
+
+                    tables.push(table)
+
                     for(let responsetable in tables)
                     {
                         console.log(responsetable.toString())
