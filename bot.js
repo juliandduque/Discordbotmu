@@ -7,7 +7,21 @@ const fechaArkaWar = new Date("May 27, 2020 21:00:00-05:00");
 const fechaIWC = new Date("May 31, 2020 20:00:00-05:00");
 var razas = [ "SM", "BK", "ELF", "MG", "DL", "SUM", "RF", "RW", "SL" ]
 var guilds = [ "GAMEOVER", "GREMORY", "GOLDCLAN"]
-
+var esmarika = [
+    "Si lo fuera me lo como",
+    "la geta pirobo"
+    "y pollo, porque nuestros bks no pegan como los de alla?",
+    "Si pero solo le gusta dar a los claymore",
+    "xd",
+    "no tan marika como perder el arka faltando 1 minuto",
+    "no tan marika como usted",
+    "rico",
+    "ve a leviar pollo",
+    "te has visto en el espejo?",
+    "y lo tiene asi: (_o_)",
+    "Si el es marika todos aca somos unas floresitas hermosas",
+    "Tu comentario mato a sebasvarg de reflejo"
+]
 function showRemaining(timeto, frequency) {
 
     var _second = 1000;
@@ -41,6 +55,10 @@ bot.on("message", message => {
     
     let args = message.content.substring(1).split(' ')
     let command = args[0];
+
+    if (command.includes('esmarika')){
+        message.reply(esmarika[Math.floor(Math.random() * array.length)]); 
+	}
     
     switch (command) 
     {
@@ -57,8 +75,8 @@ bot.on("message", message => {
             break;
 
         case 'help':
-            var helpresponse = "\n```- ping, pong, ayuda, goodbot, comoingresargremory, duqueesmarika, amyesmarika, ruleresmarika, arkanthosesmarika, rulozeroesmarika, magaoscuraesmarika // me obliga a decir huevadas \
-                            \n- tiempoCS, tiempoArka, tiempoIWC //reporta cuanto falta para el event o\
+            var helpresponse = "\n```- ping, pong, help, ayuda, goodbot, comoingresargremory, *esmarika // me obliga a decir huevadas \
+                            \n- tiempoCS, tiempoArka, tiempoIWC //reporta cuanto falta para el evento \
                             \n- lista {evento} // lista los participantes registrados para el evento \
                             \n- registrar {evento} {personaje} {raza} {radiance} {guild} // registra tu usuario al evento \
                             \n- darkness {server} //reporta la muerte del god y en 4 horas notifica \
@@ -72,30 +90,6 @@ bot.on("message", message => {
 
         case 'goodbot':
             message.reply("la geta pirobo");
-            break;
-
-        case 'duqueesmarika':
-            message.reply("Si lo fuera me lo como.");
-            break;
-
-        case 'arkanthosesmarika':
-            message.reply("y pollo, porque nuestros bks no pegan como los de alla?");
-            break;
-
-        case 'amyesmarika':
-            message.reply("Si pero solo le gusta dar a los claymore.");
-            break
-            ;
-        case 'rulozeroesmarika':
-            message.reply("Si el es marika todos aca somos unas floresitas hermosas.");
-            break;
-        
-        case 'magaoscuraesmarika':
-            message.reply("Y tiene pene");
-            break;
-
-        case 'ruleresmarika':
-            message.reply("Tu comentario mato a sebasvarg de reflejo");
             break;
 
         case 'tiempoCS':
@@ -247,8 +241,8 @@ bot.on("message", message => {
             let sender2 = message.author.username 
             let personaje2 = args[2]
             let raza2 = args[3].toUpperCase()
-            let radiance2 = args[4]toLowerCase()
-            let guild2 = args[5]toUpperCase()
+            let radiance2 = args[4].toLowerCase()
+            let guild2 = args[5].toUpperCase()
 
             if( !razas.includes(raza2) ){
                 message.reply('Solo se permiten estas razas: ' + razas.toString())     
