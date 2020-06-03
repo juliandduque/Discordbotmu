@@ -5,7 +5,7 @@ const Table = require('cli-table');
 const fechaCS = new Date("May 26, 2020 20:00:00-05:00");
 const fechaArkaWar = new Date("May 27, 2020 21:00:00-05:00");
 const fechaIWC = new Date("May 31, 2020 20:00:00-05:00");
-var razas = [ "SM", "BK", "ELF", "MG", "DL", "SUM", "RF", "RW", "SL" ]
+var razas = [ "SM", "BK", "ELF", "MG", "DL", "SUM", "RF", "RW", "SL". "GL" ]
 var guilds = [ "GAMEOVER", "GREMORY", "GOLDCLAN"]
 var esmarika = [
     "Si lo fuera me lo como",
@@ -223,13 +223,13 @@ bot.on("message", message => {
          
             if (args.length < 6){
                 console.log(args.length)
-                message.reply('Usa este formato: registrar {evento (cs, arka, iwc)} {personaje} {raza} {radiance} {guild}');
+                message.reply('Usa este formato: registrar {evento} {personaje} {raza} {radiance} {guild}');
                 break
             }
             
             let tabla2 = ''
 
-            let lista2 = args[1]
+            let lista2 = args[1].toLowerCase()
             if (lista2 === 'cs') tabla2 = 'aadfacd'
             else if (lista2 === 'arka') tabla2 = 'abbfdfe'
             else if (lista2 === 'iwc') tabla2 = 'adedaff'
@@ -245,11 +245,13 @@ bot.on("message", message => {
             let guild2 = args[5].toUpperCase()
 
             if( !razas.includes(raza2) ){
-                message.reply('Solo se permiten estas razas: ' + razas.toString())     
+                message.reply('Solo se permiten estas razas: ' + razas.toString()) 
+                break;
 			}
 
             if( !guilds.includes(guild2) ){
-                message.reply('Solo se permiten estas guilds: ' + guilds.toString())     
+                message.reply('Solo se permiten estas guilds: ' + guilds.toString())  
+                break;
 			}
             let options = {
                 "method": "PATCH",
