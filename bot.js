@@ -219,7 +219,7 @@ bot.on("message", message => {
 
                     for(var responsetable in tables)
                     {
-                        console.log(tables[responsetable]))
+                        console.log(tables[responsetable])
                         message.reply("```" + tables[responsetable] + "```");
 					}
                 });
