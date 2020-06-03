@@ -193,7 +193,7 @@ bot.on("message", message => {
                     let counter = 0
                     for(let listkey in parsedResponse) 
                     {      
-                        if(counter%6 === 0)
+                        if(counter%10 === 0)
                         {
                             if (table)
                             {
