@@ -212,6 +212,7 @@ bot.on("message", message => {
                         let radiance = parsedResponse[listkey]['radiance']
 					    
                         table.push([listkey, personaje, raza, radiance, guild])
+                        console.log(table.toString())
                         counter++;
 				    }
                     for(let responsetable in tables)
