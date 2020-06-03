@@ -193,9 +193,12 @@ bot.on("message", message => {
                     let counter = 0
                     for(let listkey in parsedResponse) 
                     {      
+                        console.log(counter)
                         if(counter%10 === 0)
                         {
                             if (table)tables.push(table)
+
+                            console.log(table.toString());
 
                             table = new Table({
                                 head: ['Piloto', 'Personaje', 'Raza', 'Radiance', 'Guild']
@@ -212,6 +215,7 @@ bot.on("message", message => {
 				    }
                     for(let responsetable in tables)
                     {
+                        console.log(responsetable.toString())
                         message.reply("```" + responsetable.toString() + "```");
 					}
                 });
