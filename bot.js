@@ -213,8 +213,8 @@ bot.on("message", message => {
                     {
                         console.log(tables[responsetable])
                         message.reply("```" + tables[responsetable] + "```");
-                        message.reply("Total registrados: " + counter)
 					}
+                     message.reply("Total registrados: " + counter)
                 });
             });
             listarequest.shouldKeepAlive = false
