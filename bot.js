@@ -5,7 +5,7 @@ const Table = require('cli-table');
 const fechaCS = new Date("May 26, 2020 20:00:00-05:00");
 const fechaArkaWar = new Date("May 27, 2020 21:00:00-05:00");
 const fechaIWC = new Date("May 31, 2020 20:00:00-05:00");
-var razas = [ "SM", "BK", "ELF", "MG", "DL", "SUM", "RF", "RW", "SL". "GL" ]
+var razas = [ "SM", "BK", "ELF", "MG", "DL", "SUM", "RF", "RW", "SL", "GL" ]
 var guilds = [ "GAMEOVER", "GREMORY", "GOLDCLAN"]
 var esmarika = [
     "Si lo fuera me lo como",
@@ -213,6 +213,7 @@ bot.on("message", message => {
                     {
                         console.log(tables[responsetable])
                         message.reply("```" + tables[responsetable] + "```");
+                        message.reply("Total registrados: " + counter)
 					}
                 });
             });
