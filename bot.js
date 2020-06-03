@@ -190,7 +190,7 @@ bot.on("message", message => {
                     let tables = []
 
                     let table = null
-                    int counter = 0
+                    let counter = 0
                     for(let listkey in parsedResponse) 
                     {      
                         if(counter%10 === 0)
@@ -208,8 +208,12 @@ bot.on("message", message => {
                         let radiance = parsedResponse[listkey]['radiance']
 					    
                         table.push([listkey, personaje, raza, radiance, guild])
+                        counter++;
 				    }
-                    message.reply("```" + table.toString() + "```");
+                    for(let responsetable in tables)
+                    {
+                        message.reply("```" + responsetable.toString() + "```");
+					}
                 });
             });
             listarequest.shouldKeepAlive = false
