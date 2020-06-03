@@ -186,7 +186,7 @@ bot.on("message", message => {
 
                     // Data reception is done, do whatever with it!
                     let parsedResponse = JSON.parse(body)
-
+                    console.log(parsedResponse)
                     let tables = []
 
                     let table = null
@@ -205,6 +205,7 @@ bot.on("message", message => {
                               , colWidths: [15, 15, 10, 15, 15]
                             });
 						}
+
                         let personaje = parsedResponse[listkey]['personaje']
                         let raza = parsedResponse[listkey]['raza']
                         let guild = parsedResponse[listkey]['guild']
