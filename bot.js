@@ -57,7 +57,7 @@ bot.on("message", message => {
     let command = args[0];
 
     if (command.includes('esmarika')){
-        message.reply(esmarika[Math.floor(Math.random() * array.length)]); 
+        message.reply(esmarika[Math.floor(Math.random() * esmarika.length)]); 
 	}
     
     switch (command) 
