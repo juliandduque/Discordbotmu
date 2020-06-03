@@ -187,13 +187,21 @@ bot.on("message", message => {
                     // Data reception is done, do whatever with it!
                     let parsedResponse = JSON.parse(body)
 
-                    let table = new Table({
-                        head: ['Piloto', 'Personaje', 'Raza', 'Radiance', 'Guild']
-                      , colWidths: [15, 15, 10, 15, 15]
-                    });
+                    let tables = []
 
+                    let table = null
+                    int counter = 0
                     for(let listkey in parsedResponse) 
-                    {                        
+                    {      
+                        if(counter%10 === 0)
+                        {
+                            if (table)tables.push(table)
+
+                            table = new Table({
+                                head: ['Piloto', 'Personaje', 'Raza', 'Radiance', 'Guild']
+                              , colWidths: [15, 15, 10, 15, 15]
+                            });
+						}
                         let personaje = parsedResponse[listkey]['personaje']
                         let raza = parsedResponse[listkey]['raza']
                         let guild = parsedResponse[listkey]['guild']
