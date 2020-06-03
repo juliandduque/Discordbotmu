@@ -197,7 +197,7 @@ bot.on("message", message => {
                         if(counter%6 === 0)
                         {
                             if (table)
-                            {}
+                            {
                                 tables.push(table)
                             }
 
