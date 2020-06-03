@@ -61,6 +61,7 @@ bot.on("message", message => {
                             \n- tiempoIWC //reporta cuanto falta para el Ice Wind Castle \
                             \n- darkness {server} //reporta la muerte del god y en 4 horas sale mensaje de ventana abierta\
                             \n- lista {evento (cs, arka, iwc)} // lista los participantes registrados para el evento \
+                            \n- registrar {evento (cs, arka, iwc)} {personaje} {raza} {radiance} {guild} // registra tu usuario de discord a un evento. Si ya esta registrado, reemplaza el registro viejo \
                             \n- elite {server} //reporta la muerte de los elite y en 11 horas 55 min horas avisa que van a salir```"
             message.reply(helpresponse); 
             break;
