@@ -169,7 +169,7 @@ bot.on("message", message => {
 
             let listarequest= http.get({
                 host: 'extendsclass.com',
-                path: '/api/json-storage/bin/' + tabla + ''+'?stuff='+ Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15),
+                path: '/api/json-storage/bin/' + tabla + ''+'?stuff='+ Math.random().toString(36).substring(2, 8) + Math.random().toString(36).substring(2, 8),
                 headers: 
                 { 
                     'security-key': 'JorgeEsGay',
@@ -263,7 +263,7 @@ bot.on("message", message => {
             let options = {
                 "method": "PATCH",
                 "hostname": "extendsclass.com",
-                "path": '/json-storage.php/bin?' + tabla2,
+                "path": '/api/json-storage/bin/' + tabla2,
                 "headers": 
                 { 
                     'security-key': 'JorgeEsGay',
