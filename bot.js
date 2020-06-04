@@ -146,7 +146,9 @@ bot.on("message", message => {
             break; 
         
         case 'lista':
-
+	    message.reply('Enlisteme este pirobo} ');
+	    return;
+		    
             if (args.length < 2){
                 message.reply('Usa este formato: lista {evento (cs, arka, iwc)} ');
                 break;
@@ -226,7 +228,9 @@ bot.on("message", message => {
             break;
     
         case 'registrar':
-         
+            message.reply('en este momento estamos bajo mantenimiento');
+	    return;
+		    
             if (args.length < 6){
                 console.log(args.length)
                 message.reply('Usa este formato: registrar {evento} {personaje} {raza} {radiance} {guild}');
