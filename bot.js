@@ -54,12 +54,12 @@ bot.on("message", message => {
     if (message.content.indexOf('?') !== 0) return;
     
     let args = message.content.substring(1).split(' ')
-    let command = args[0];
+    let command = args[0].toLowerCase();
 
     if (command.includes('esmarika')){
         message.reply(esmarika[Math.floor(Math.random() * esmarika.length)]); 
 	}
-    if (command.toLowerCase().includes('bye')){
+    if (command.includes('bye')){
 	message.reply("https://tenor.com/view/bye-slide-baby-later-peace-out-gif-12999722"); 
 	}
     switch (command) 
@@ -98,15 +98,15 @@ bot.on("message", message => {
             message.reply("la geta pirobo");
             break;
 
-        case 'tiempoCS':
+        case 'tiempocs':
             message.reply(showRemaining(fechaCS, 12096e5));
             break;
 
-        case 'tiempoArka':
+        case 'tiempoarka':
             message.reply(showRemaining(fechaArkaWar, 604800*1000));
             break;
 
-        case 'tiempoIWC':
+        case 'tiempoiwc':
             message.reply(showRemaining(fechaIWC, 604800*1000));
             break;
 
