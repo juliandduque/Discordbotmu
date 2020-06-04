@@ -263,7 +263,7 @@ bot.on("message", message => {
             let options = {
                 "method": "PATCH",
                 "hostname": "extendsclass.com",
-                "path": '/api/json-storage/bin/' + tabla2,
+                "path": '/json-storage.php/bin?' + tabla2,
                 "headers": 
                 { 
                     'security-key': 'JorgeEsGay',
