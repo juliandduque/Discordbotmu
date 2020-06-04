@@ -172,8 +172,7 @@ bot.on("message", message => {
                 path: '/jsonStorage.php?bin=' + tabla + ''+'?stuff='+ Math.random().toString(36).substring(2, 8) + Math.random().toString(36).substring(2, 8),
                 headers: 
                 { 
-                    'security-key': 'JorgeEsGay',
-                    'Cache-Control': 'no-cache, no-store'
+                    'security-key': 'JorgeEsGay'
                 }
             }, function(response) {
                 // Continuously update stream with data
