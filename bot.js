@@ -59,7 +59,9 @@ bot.on("message", message => {
     if (command.includes('esmarika')){
         message.reply(esmarika[Math.floor(Math.random() * esmarika.length)]); 
 	}
-    
+    if (command.toLowerCase().includes('bye')){
+	message.reply("https://tenor.com/view/bye-slide-baby-later-peace-out-gif-12999722"); 
+	}
     switch (command) 
     {
         case 'ping':
