@@ -69,7 +69,11 @@ bot.on("message", message => {
         case 'pong':
             message.reply("pongi me lo mama");
             break;
-
+	
+	case 'smfiru':
+	    message.reply("Si nuestra alianza fuera un hombre, el seria el pene y las huevas.");
+	    break
+		    
         case 'comoingresargremory':
             message.reply("3 cm o menos bb");
             break;
