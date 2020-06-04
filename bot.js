@@ -169,7 +169,7 @@ bot.on("message", message => {
 
             let listarequest= http.get({
                 host: 'extendsclass.com',
-                path: '/api/json-storage/bin/' + tabla + ''+'?stuff='+ Math.random().toString(36).substring(2, 8) + Math.random().toString(36).substring(2, 8),
+                path: '/jsonStorage.php?bin=' + tabla + ''+'?stuff='+ Math.random().toString(36).substring(2, 8) + Math.random().toString(36).substring(2, 8),
                 headers: 
                 { 
                     'security-key': 'JorgeEsGay',
