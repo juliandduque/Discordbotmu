@@ -183,8 +183,8 @@ bot.on("message", message => {
                 response.on('end', function() {
 
                     // Data reception is done, do whatever with it!
+                    console.log(body)
                     let parsedResponse = JSON.parse(body)
-                    console.log(parsedResponse)
                     let tables = []
 
                     var table = ''
