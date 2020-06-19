@@ -46,7 +46,8 @@ var picabot = [
     "Busco party para VIP majestic",
     "?",
     "no gracias",
-    "shi shenol"
+    "shi shenol",
+    "acabo de hacer una mision gens"
 ]
 function showRemaining(timeto, frequency) {
 
