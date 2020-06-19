@@ -114,11 +114,11 @@ bot.on("message", message => {
             break;
 		    
 	case 'unbanthos':
-            message.reply(showRemaining(unban, 12096e5));
+            message.reply(showRemaining(unban, 12096e5) + " para que digievolucione arkanthos");
             break;
 	
 	case 'unbanqueen':
-            message.reply(showRemaining(unban, 12096e5));
+            message.reply(showRemaining(unban, 12096e5) + " para que digievolucione lagqueen");
             break;
 
         case 'darkness':
