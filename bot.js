@@ -36,7 +36,7 @@ var lazytepea = [
 var arbanthos = [
     "https://media.discordapp.net/attachments/621481989945425922/722674205249765386/unknown.png",
     "https://media.discordapp.net/attachments/621481989945425922/722663792034447420/2Q.png",
-    "https://media.discordapp.net/attachments/621481989945425922/722663310046003300/45e1q6.png"
+    "https://i.imgflip.com/45oowy.jpg"
 ]
 function showRemaining(timeto, frequency) {
 
