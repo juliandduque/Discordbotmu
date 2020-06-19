@@ -5,6 +5,7 @@ const Table = require('cli-table');
 const fechaCS = new Date("May 26, 2020 20:00:00-05:00");
 const fechaArkaWar = new Date("May 27, 2020 21:00:00-05:00");
 const fechaIWC = new Date("May 31, 2020 20:00:00-05:00");
+const unban = new Date("June 30, 2020 00:00:00-05:00");
 var razas = [ "SM", "BK", "ELF", "MG", "DL", "SUM", "RF", "RW", "SL", "GL" ]
 var guilds = [ "GAMEOVER", "GREMORY", "GOLDCLAN"]
 var esmarika = [
@@ -20,7 +21,9 @@ var esmarika = [
     "te has visto en el espejo?",
     "y lo tiene asi: (_o_)",
     "Si el es marika todos aca somos unas floresitas hermosas",
-    "Tu comentario mato a sebasvarg de reflejo"
+    "Tu comentario mato a sebasvarg de reflejo",
+    "Mas marika que matar pollos en crywolf y que te baneen?",
+    "ok, dense un beso"
 ]
 function showRemaining(timeto, frequency) {
 
@@ -71,7 +74,7 @@ bot.on("message", message => {
         case 'pong':
             message.reply("pongi me lo mama");
             break;
-	
+		    
 	case 'smfiru':
 	    message.reply("Si nuestra alianza fuera un hombre, el seria el pene y las huevas.");
 	    break
@@ -109,6 +112,14 @@ bot.on("message", message => {
         case 'tiempoiwc':
             message.reply(showRemaining(fechaIWC, 604800*1000));
             break;
+		    
+	case 'unbanthos':
+            message.reply(showRemaining(unban, 12096e5));
+            break;
+	
+	case 'unbanqueen':
+            message.reply(showRemaining(unban, 12096e5));
+            break;
 
         case 'darkness':
             
@@ -118,11 +129,10 @@ bot.on("message", message => {
             
             message.reply('Muerte de God of Darkness reportada en server: ' + darknessserver);
 
-            let darknessreturner = 'Ventana del GOD abierta por 2 horas en server ' + darknessserver + ' @here';
-
             setTimeout(function () 
             {
-                message.reply(message, darknessreturner);
+		let darknessreturner = 'Ventana del GOD abierta por 2 horas @here';
+                message.reply(darknessreturner);
             }, 14400000);
             
             break;
@@ -135,12 +145,11 @@ bot.on("message", message => {
 
             message.reply('Muerte de Elites reportada en server: ' + eliteserver);
 
-            let elitereturner = 'Elites salen en 5 minutos en el server ' + eliteserver + ' @here'
 
             setTimeout(function () 
             {
+         	let elitereturner = 'Elites salen en 5 minutos @here'
                 message.reply(elitereturner);
-
             }, 43500000);
             
             break; 
