@@ -118,7 +118,7 @@ bot.on("message", message => {
             break;
 	
 	case 'unbanqueen':
-            message.reply(showRemaining(unban, 12096e5) + " para que digievolucione lagqueen");
+            message.reply(showRemaining(unban, 12096e5) + " para que digievolucione bbq");
             break;
 
         case 'darkness':
