@@ -23,7 +23,8 @@ var esmarika = [
     "Si el es marika todos aca somos unas floresitas hermosas",
     "Tu comentario mato a sebasvarg de reflejo",
     "Mas marika que matar pollos en crywolf y que te baneen?",
-    "ok, dense un beso"
+    "ok, dense un beso",
+    "La pregunta no es si es marika o no, la pregunta es cuantos FOX98 le caben en el culo"
 ]
 function showRemaining(timeto, frequency) {
 
