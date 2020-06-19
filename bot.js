@@ -37,6 +37,15 @@ var arbanthos = [
     "https://media.discordapp.net/attachments/621481989945425922/722674205249765386/unknown.png",
     "https://i.imgflip.com/45oowy.jpg"
 ]
+
+var picabot = [
+    "https://media.discordapp.net/attachments/621481989945425922/723576706870280242/image0.png",
+    "ok",
+    "si",
+    "hablalo con mi master",
+    "Busco party para VIP majestic",
+    "?"
+]
 function showRemaining(timeto, frequency) {
 
     var _second = 1000;
@@ -66,6 +75,8 @@ bot.on("ready", function () {
 bot.on("message", message => {
 
     if (message.author.bot) return;
+    if (message.content.toLowerCase().includes('picabot')){ message.reply(picabot[Math.floor(Math.random() * picabot.length)]);
+    }
     if (message.content.indexOf('?') !== 0) return;
     
     let args = message.content.substring(1).split(' ')
