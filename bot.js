@@ -26,6 +26,18 @@ var esmarika = [
     "ok, dense un beso",
     "La pregunta no es si es marika o no, la pregunta es cuantos FOX98 le caben en el culo"
 ]
+
+var lazytepea = [
+    "https://media.discordapp.net/attachments/621481989945425922/722667528350072862/45e36p.png",
+    "https://media.discordapp.net/attachments/621481989945425922/722674076648341504/45e59k.jpg",
+    "https://i.imgflip.com/45onva.jpg"
+]
+
+var arbanthos = [
+    "https://media.discordapp.net/attachments/621481989945425922/722674205249765386/unknown.png",
+    "https://media.discordapp.net/attachments/621481989945425922/722663792034447420/2Q.png",
+    "https://media.discordapp.net/attachments/621481989945425922/722663310046003300/45e1q6.png"
+]
 function showRemaining(timeto, frequency) {
 
     var _second = 1000;
@@ -63,9 +75,7 @@ bot.on("message", message => {
     if (command.includes('esmarika')){
         message.reply(esmarika[Math.floor(Math.random() * esmarika.length)]); 
 	}
-    if (command.includes('bye')){
-	message.reply("https://tenor.com/view/bye-slide-baby-later-peace-out-gif-12999722"); 
-	}
+	
     switch (command) 
     {
         case 'ping':
@@ -80,12 +90,24 @@ bot.on("message", message => {
 	    message.reply("Si nuestra alianza fuera un hombre, el seria el pene y las huevas.");
 	    break
 		    
+	case 'bye':
+	    message.reply("https://tenor.com/view/bye-slide-baby-later-peace-out-gif-12999722"); 
+	    break
+		    
         case 'comoingresargremory':
             message.reply("3 cm o menos bb");
             break;
-
+		    
+        case 'arkanthos':
+            message.reply(arbanthos[Math.floor(Math.random() * esmarika.length)]);
+            break;
+		    
+       case 'lazytepea':
+            message.reply(lazytepea[Math.floor(Math.random() * esmarika.length)]);
+            break;
+		    
         case 'help':
-            var helpresponse = "\n```- ping, pong, help, ayuda, goodbot, comoingresargremory, *esmarika // me obliga a decir huevadas \
+            var helpresponse = "\n```- ping, pong, help, ayuda, goodbot, comoingresargremory, *esmarika, lazytepea, arkanthos, unbanthos, unbanqueen, bye, smfiru // me obliga a decir huevadas \
                             \n- tiempoCS, tiempoArka, tiempoIWC //reporta cuanto falta para el evento \
                             \n- lista {evento} // lista los participantes registrados para el evento \
                             \n- registrar {evento} {personaje} {raza} {radiance} {guild} // registra tu usuario al evento \
