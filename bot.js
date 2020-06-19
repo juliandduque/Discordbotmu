@@ -99,11 +99,11 @@ bot.on("message", message => {
             break;
 		    
         case 'arkanthos':
-            message.reply(arbanthos[Math.floor(Math.random() * esmarika.length)]);
+            message.reply(arbanthos[Math.floor(Math.random() * arbanthos.length)]);
             break;
 		    
        case 'lazytepea':
-            message.reply(lazytepea[Math.floor(Math.random() * esmarika.length)]);
+            message.reply(lazytepea[Math.floor(Math.random() * lazytepea.length)]);
             break;
 		    
         case 'help':
