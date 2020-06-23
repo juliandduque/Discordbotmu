@@ -51,6 +51,7 @@ var picabot = [
     "Tu comentario hizo que banearan a bloodqueen",
     "Tu comentario hizo que banearan a arkanthos",
     "Tu comentario hizo que lazy tepeara",
+    "Picabot killed BrianV in ferea",
     "mas bien, preguntate porque nuestr@ master es un@ travesti peli roja",
     "has escuchado la historia del hombre con 3 penes? Una vez estaba midiendose el pantalon, y cuando le midieron la entrepierna, le preguntaron, a que lado te pones el pene? El respondio: si"
 ]
