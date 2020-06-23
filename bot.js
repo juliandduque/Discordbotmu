@@ -149,10 +149,6 @@ bot.on("message", message => {
             message.reply(showRemaining(fechaIWC, 604800*1000));
             break;
 		    
-	case 'unbanthos':
-            message.reply(showRemaining(unban, 12096e5) + " para que digievolucione arkanthos");
-            break;
-	
 	case 'unbanqueen':
             message.reply(showRemaining(unban, 12096e5) + " para que digievolucione bbq");
             break;
