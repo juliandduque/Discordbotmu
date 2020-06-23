@@ -46,6 +46,7 @@ var picabot = [
     "?",
     "no gracias",
     "no",
+    "Picahielo entered the game",
     "ahi dias que si",
     "has escuchado la historia del hombre con 3 penes? Una vez estaba midiendose el pantalon, y cuando le midieron la entrepierna, le preguntaron, a que lado te pones el pene? El respondio: si",
     "shi shenol",
