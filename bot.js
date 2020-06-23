@@ -42,17 +42,17 @@ var picabot = [
     "https://media.discordapp.net/attachments/621481989945425922/723576706870280242/image0.png",
     "ok",
     "si",
-    "hablalo con mi master",
     "?",
     "no gracias",
-    "no",
     "Picahielo entered the game",
     "Porque hablan tanto sobre mi?",
     "hay dias que si",
+    "Tu comentario mato a sebasvarg de reflejo",
+    "Tu comentario hizo que banearan a bloodqueen",
+    "Tu comentario hizo que banearan a arkanthos",
+    "Tu comentario hizo que lazy tepeara",
     "mas bien, preguntate porque nuestr@ master es un@ travesti peli roja",
-    "has escuchado la historia del hombre con 3 penes? Una vez estaba midiendose el pantalon, y cuando le midieron la entrepierna, le preguntaron, a que lado te pones el pene? El respondio: si",
-    "shi shenol",
-    "acabo de hacer una mision gens"
+    "has escuchado la historia del hombre con 3 penes? Una vez estaba midiendose el pantalon, y cuando le midieron la entrepierna, le preguntaron, a que lado te pones el pene? El respondio: si"
 ]
 function showRemaining(timeto, frequency) {
 
