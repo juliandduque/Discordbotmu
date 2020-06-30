@@ -5,7 +5,6 @@ const Table = require('cli-table');
 const fechaCS = new Date("May 26, 2020 20:00:00-05:00");
 const fechaArkaWar = new Date("May 27, 2020 21:00:00-05:00");
 const fechaIWC = new Date("May 31, 2020 20:00:00-05:00");
-const unban = new Date("June 30, 2020 00:00:00-05:00");
 var razas = [ "SM", "BK", "ELF", "MG", "DL", "SUM", "RF", "RW", "SL", "GL" ]
 var guilds = [ "GAMEOVER", "GREMORY", "GOLDCLAN"]
 var esmarika = [
@@ -157,7 +156,7 @@ bot.on("message", message => {
             break;
 		    
 	case 'unbanqueen':
-            message.reply(showRemaining(unban, 12096e5) + " para que digievolucione bbq");
+            message.reply("ya es libre la perra esa");
             break;
 
         case 'darkness':
