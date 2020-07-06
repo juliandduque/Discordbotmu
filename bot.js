@@ -156,7 +156,11 @@ bot.on("message", message => {
             break;
 		    
 	case 'unbanqueen':
-            message.reply("ya es libre la perra esa");
+            message.reply("borre esa perra mejor");
+            break;
+		    
+	case 'unbanthos':
+            message.reply("otra vez este hpta?");
             break;
 
         case 'darkness':
