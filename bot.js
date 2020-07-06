@@ -120,8 +120,12 @@ bot.on("message", message => {
         case 'arkanthos':
             message.reply(arbanthos[Math.floor(Math.random() * arbanthos.length)]);
             break;
+	
+	case 'kyclazy':
+            message.reply('KYC USTED PIROBO');
+            break;
 		    
-       case 'lazytepea':
+        case 'lazytepea':
             message.reply(lazytepea[Math.floor(Math.random() * lazytepea.length)]);
             break;
 		    
