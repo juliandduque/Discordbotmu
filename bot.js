@@ -103,7 +103,8 @@ bot.on("message", message => {
             break;
 
         case 'pong':
-            message.reply("@lauraserrano#8299 manda video pls");
+            message.reply(" @
+laura manda video pls");
             break;
 		    
 	case 'smfiru':
