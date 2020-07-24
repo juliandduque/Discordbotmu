@@ -84,11 +84,11 @@ bot.on("ready", function () {
 bot.on("message", message => {
 
     if (message.author.bot) return;
-    //if (message.content.toLowerCase().includes('picabot')){ message.reply(picabot[Math.floor(Math.random() * picabot.length)]);
-    //}
+    if (message.content.toLowerCase().includes('picabot')){ message.reply(picabot[Math.floor(Math.random() * picabot.length)]);
+    } 
     if (message.content.indexOf('?') !== 0) return;
-    message.reply('disfruten de ozuna :) ')
-    return;
+    //message.reply('disfruten de ozuna :) ')
+    //return;
     let args = message.content.substring(1).split(' ')
     let command = args[0].toLowerCase();
 
@@ -103,7 +103,7 @@ bot.on("message", message => {
             break;
 
         case 'pong':
-            message.reply("pongi me lo mama");
+            message.reply("pongi me lo mama hasta las huevas.");
             break;
 		    
 	case 'smfiru':
