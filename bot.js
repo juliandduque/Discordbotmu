@@ -103,7 +103,7 @@ bot.on("message", message => {
             break;
 
         case 'pong':
-            message.reply("pongi me lo mama hasta las huevas.");
+            message.reply("pongi me lo mama hasta las huevas y a Laura lame el culo ");
             break;
 		    
 	case 'smfiru':
