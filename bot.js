@@ -103,7 +103,7 @@ bot.on("message", message => {
             break;
 
         case 'pong':
-            message.reply("lauradick manda video pls");
+            message.reply("pongi me lo mama");
             break;
 		    
 	case 'smfiru':
