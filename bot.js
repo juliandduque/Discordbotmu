@@ -105,11 +105,7 @@ bot.on("message", message => {
         case 'pong':
             message.reply("pongi me lo mama");
             break;
-		    
-	case 'smfiru':
-	    message.reply("Si nuestra alianza fuera un hombre, el seria el pene y las huevas.");
-	    break
-		    
+
 	case 'bye':
 	    message.reply("https://tenor.com/view/bye-slide-baby-later-peace-out-gif-12999722"); 
 	    break
@@ -118,20 +114,16 @@ bot.on("message", message => {
             message.reply("3 cm o menos bb");
             break;
 		    
-        case 'arkanthos':
+        case 'charmander':
             message.reply(arbanthos[Math.floor(Math.random() * arbanthos.length)]);
             break;
-	
-	case 'kyclazy':
-            message.reply('KYC USTED PIROBO');
-            break;
 		    
-        case 'lazytepea':
+        case 'squirt':
             message.reply(lazytepea[Math.floor(Math.random() * lazytepea.length)]);
             break;
 		    
         case 'help':
-            var helpresponse = "\n```- ping, pong, help, ayuda, goodbot, comoingresargremory, *esmarika, lazytepea, arkanthos, unbanthos, unbanqueen, bye, smfiru // me obliga a decir huevadas \
+            var helpresponse = "\n```- ping, pong, help, ayuda, goodbot, comoingresargremory, *esmarika, bye, // me obliga a decir huevadas \
                             \n- tiempoCS, tiempoArka, tiempoIWC //reporta cuanto falta para el evento \
                             \n- lista {evento} // lista los participantes registrados para el evento \
                             \n- registrar {evento} {personaje} {raza} {radiance} {guild} // registra tu usuario al evento \
