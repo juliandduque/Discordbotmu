@@ -152,14 +152,6 @@ bot.on("message", message => {
             message.reply(showRemaining(fechaIWC, 604800*1000));
             break;
 		    
-	case 'unbanqueen':
-            message.reply("borre esa perra mejor");
-            break;
-		    
-	case 'unbanthos':
-            message.reply("otra vez este hpta?");
-            break;
-
         case 'darkness':
             
             let darknessserver = 1
