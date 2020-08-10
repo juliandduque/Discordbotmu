@@ -29,7 +29,8 @@ var esmarika = [
 var lazytepea = [
     "https://media.discordapp.net/attachments/621481989945425922/722667528350072862/45e36p.png",
     "https://media.discordapp.net/attachments/621481989945425922/722674076648341504/45e59k.jpg",
-    "https://i.imgflip.com/45onva.jpg"
+    "https://i.imgflip.com/45onva.jpg",
+    "https://media.discordapp.net/attachments/686313294415659268/742471386840170516/unknown.png"
 ]
 
 var arbanthos = [
