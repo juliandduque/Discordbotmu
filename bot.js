@@ -106,7 +106,15 @@ bot.on("message", message => {
         case 'pong':
             message.reply("pongi me lo mama");
             break;
-
+	
+    	case 'luis':	    
+	    message.reply("https://images3.memedroid.com/images/UPLOADED13/5cf2b8aa308bb.jpeg");
+	    break;
+	
+	case 'xylon':	    
+	    message.reply("https://images3.memedroid.com/images/UPLOADED13/5cf2b8aa308bb.jpeg");
+	    break;
+		    
 	case 'bye':
 	    message.reply("https://tenor.com/view/bye-slide-baby-later-peace-out-gif-12999722"); 
 	    break
