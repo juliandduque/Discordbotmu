@@ -9,7 +9,6 @@ var razas = [ "SM", "BK", "ELF", "MG", "DL", "SUM", "RF", "RW", "SL", "GL" ]
 var guilds = [ "GAMEOVER", "GREMORY", "GOLDCLAN"]
 var esmarika = [
     "Si lo fuera me lo como",
-    "la geta pirobo!",
     "y pollo, porque nuestros bks no pegan como los de alla?",
     "Si pero solo le gusta dar a los claymore",
     "xd",
