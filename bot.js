@@ -84,11 +84,8 @@ bot.on("ready", function () {
 bot.on("message", message => {
 
     if (message.author.bot) return;
-    if( message.author.id === '413857838075740160'){
+    if( message.author.id === '517548641859272714'){
 	    message.reply("Feliz cumpleanos walkson");
-	}
-    if( message.author.id === 413857838075740160){
-	    message.reply("Feliz cumpleanos duque");
 	}
 	
     if (message.content.toLowerCase().includes('picabot')){ message.reply(picabot[Math.floor(Math.random() * picabot.length)]);
