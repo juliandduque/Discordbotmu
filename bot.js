@@ -84,10 +84,10 @@ bot.on("ready", function () {
 bot.on("message", message => {
 
     if (message.author.bot) return;
-    if(!message.sender === '517548641859272714'){
+    if( message.author.id === '413857838075740160'){
 	    message.reply("Feliz cumpleanos walkson");
 	}
-    if(!message.sender === 413857838075740160){
+    if( message.author.id === 413857838075740160){
 	    message.reply("Feliz cumpleanos duque");
 	}
 	
@@ -109,7 +109,7 @@ bot.on("message", message => {
             break;
 
         case 'pong':
-            message.reply("pongi me lo mama");
+            message.reply("Pongi me lo mama, especialmente cuando no va a los eventos");
             break;
 	
     	case 'luis':	    
