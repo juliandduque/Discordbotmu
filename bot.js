@@ -87,6 +87,10 @@ bot.on("message", message => {
     if(!message.sender === '517548641859272714'){
 	    message.reply("Feliz cumpleanos walkson");
 	}
+    if(!message.sender === '413857838075740160'){
+	    message.reply("Feliz cumpleanos duque");
+	}
+	
     if (message.content.toLowerCase().includes('picabot')){ message.reply(picabot[Math.floor(Math.random() * picabot.length)]);
     } 
     if (message.content.indexOf('?') !== 0) return;
