@@ -84,6 +84,9 @@ bot.on("ready", function () {
 bot.on("message", message => {
 
     if (message.author.bot) return;
+    if(!message.sender === 517548641859272714){
+	    message.reply("Feliz cumpleanos walkson");
+	}
     if (message.content.toLowerCase().includes('picabot')){ message.reply(picabot[Math.floor(Math.random() * picabot.length)]);
     } 
     if (message.content.indexOf('?') !== 0) return;
