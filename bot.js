@@ -87,7 +87,7 @@ bot.on("message", message => {
     if(!message.sender === '517548641859272714'){
 	    message.reply("Feliz cumpleanos walkson");
 	}
-    if(!message.sender === '413857838075740160'){
+    if(!message.sender === 413857838075740160){
 	    message.reply("Feliz cumpleanos duque");
 	}
 	
