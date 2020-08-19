@@ -94,8 +94,7 @@ bot.on("message", message => {
     if (message.content.toLowerCase().includes('picabot')){ message.reply(picabot[Math.floor(Math.random() * picabot.length)]);
     } 
     if (message.content.indexOf('?') !== 0) return;
-    //message.reply('disfruten de ozuna :) ')
-    //return;
+	
     let args = message.content.substring(1).split(' ')
     let command = args[0].toLowerCase();
 
@@ -110,7 +109,7 @@ bot.on("message", message => {
             break;
 
         case 'pong':
-            message.reply("pongi me lo mamaa");
+            message.reply("pongi me lo mama");
             break;
 	
     	case 'luis':	    
