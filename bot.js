@@ -88,6 +88,9 @@ bot.on("message", message => {
 	    message.reply("Feliz cumpleanos walkson");
 	}
 	
+    if( message.author.id === '407883898488487950'){
+	    message.reply("Feliz cumpleanos toxico ");
+	}
     if (message.content.toLowerCase().includes('picabot')){ message.reply(picabot[Math.floor(Math.random() * picabot.length)]);
     } 
     if (message.content.indexOf('?') !== 0) return;
