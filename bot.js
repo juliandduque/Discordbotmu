@@ -91,7 +91,7 @@ bot.on("message", message => {
     if( message.author.id === '407883898488487950'){
 	    message.reply("Regresaste, sera un nuevo comienso?");
 	}
-    if (message.author.id === '413857838075740160' && message.content.includes(laura) ) message.reply('{lickingeggplant}')
+    if (message.author.id === '413857838075740160' && message.content.includes('${laura}') ) message.reply('${lickingeggplant}')
     
     if (message.content.toLowerCase().includes('picabot')){ message.reply(picabot[Math.floor(Math.random() * picabot.length)]);
     } 
