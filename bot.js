@@ -46,14 +46,15 @@ var picabot = [
     "Picahielo entered the game",
     "Porque hablan tanto sobre mi?",
     "hay dias que si",
-    "Tu comentario mato a sebasvarg de reflejo",
-    "Tu comentario hizo que banearan a bloodqueen",
-    "Tu comentario hizo que banearan a arkanthos",
-    "Tu comentario hizo que lazy tepeara",
+    "Tu comentario mato a RuIer de reflejo",
+    "Tu comentario hizo que banearan a BoaHancock",
+    "Tu comentario hizo que banearan a Charmander",
+    "Tu comentario hizo que squirtle tepeara",
     "Picabot killed BrianV in ferea",
     "Asi como perder el arka en 1 minuto",
-    "mas bien, preguntate porque nuestr@ master es un@ travesti peli roja",
-    "has escuchado la historia del hombre con 3 penes? Una vez estaba midiendose el pantalon, y cuando le midieron la entrepierna, le preguntaron, a que lado te pones el pene? El respondio: si"
+    "Ahora vete y has un nuevo comienzo luego unete a voga",
+    "mas bien, preguntate porque nuestro master abusa de nuestro bienestar",
+    "como entro chou a la guild?"
 ]
 function showRemaining(timeto, frequency) {
 
@@ -84,12 +85,8 @@ bot.on("ready", function () {
 bot.on("message", message => {
 
     if (message.author.bot) return;
-    if( message.author.id === '517548641859272714'){
-	    message.reply("Feliz cumpleanos walkson");
-	}
-	
     if( message.author.id === '407883898488487950'){
-	    message.reply("Feliz cumpleanos toxico ");
+	    message.reply("Regresaste, sera un nuevo comienso?");
 	}
     if (message.content.toLowerCase().includes('picabot')){ message.reply(picabot[Math.floor(Math.random() * picabot.length)]);
     } 
@@ -109,7 +106,7 @@ bot.on("message", message => {
             break;
 
         case 'pong':
-            message.reply("Pongi me lo mama, especialmente cuando no va a los eventos");
+            message.reply("Pongi me lo mamas");
             break;
 	
     	case 'luis':	    
