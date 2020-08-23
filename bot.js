@@ -92,6 +92,10 @@ bot.on("message", message => {
 	    message.reply("Regresaste, sera un nuevo comienso?");
 	}
 	
+    if( message.author.id === '381639822953152512'){
+	    message.reply("CALLATE SMFiru HDP");
+	}
+	
     if( message.author.id === '439620149067251735'){
 	    message.reply("https://cdn.discordapp.com/attachments/686313294415659268/747138351496429609/4cfq13.jpg");
 	}
