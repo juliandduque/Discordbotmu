@@ -88,6 +88,8 @@ bot.on("message", message => {
     if( message.author.id === '407883898488487950'){
 	    message.reply("Regresaste, sera un nuevo comienso?");
 	}
+    if ( message.content.includes('746921724871835749') ) message.reply('<:stonksDOWN:746927535576580199>')
+    
     if (message.content.toLowerCase().includes('picabot')){ message.reply(picabot[Math.floor(Math.random() * picabot.length)]);
     } 
     if (message.content.indexOf('?') !== 0) return;
@@ -106,7 +108,7 @@ bot.on("message", message => {
             break;
 
         case 'pong':
-            message.reply("Pongi me lo mamas");
+            message.reply("Pongi me lo mama");
             break;
 	
     	case 'luis':	    
