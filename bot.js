@@ -91,6 +91,10 @@ bot.on("message", message => {
     if( message.author.id === '407883898488487950'){
 	    message.reply("Regresaste, sera un nuevo comienso?");
 	}
+	
+    if( message.author.id === '439620149067251735'){
+	    message.reply("https://cdn.discordapp.com/attachments/686313294415659268/747138351496429609/4cfq13.jpg");
+	}
    // if (message.author.id === '413857838075740160' ) ) message.reply('${lickingeggplant}')
     
     if (message.content.toLowerCase().includes('picabot')){ message.reply(picabot[Math.floor(Math.random() * picabot.length)]);
