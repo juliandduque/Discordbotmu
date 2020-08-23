@@ -78,8 +78,8 @@ function showRemaining(timeto, frequency) {
     return days + " dias, " + hours + " horas, " + minutes + " minutos, " + seconds + " segundos"
     }
 
-const lickingeggplant = client.emojis.get("746928250328186981");
-const laura = client.emojis.get("746928289473363968");
+const lickingeggplant = bot.emojis.get("746928250328186981");
+const laura = bot.emojis.get("746928289473363968");
 
 bot.on("ready", function () {
 	console.log("Ready to begin!")
