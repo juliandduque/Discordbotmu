@@ -78,6 +78,9 @@ function showRemaining(timeto, frequency) {
     return days + " dias, " + hours + " horas, " + minutes + " minutos, " + seconds + " segundos"
     }
 
+const lickingeggplant = client.emojis.get("746928250328186981");
+const laura = client.emojis.get("746928289473363968");
+
 bot.on("ready", function () {
 	console.log("Ready to begin!")
 });
@@ -88,7 +91,7 @@ bot.on("message", message => {
     if( message.author.id === '407883898488487950'){
 	    message.reply("Regresaste, sera un nuevo comienso?");
 	}
-    if (message.author.id === '413857838075740160' && message.content.includes('746928289473363968') ) message.reply('<:lickingeggplant:746928250328186981>')
+    if (message.author.id === '413857838075740160' && message.content.includes(laura) ) message.reply('{lickingeggplant}')
     
     if (message.content.toLowerCase().includes('picabot')){ message.reply(picabot[Math.floor(Math.random() * picabot.length)]);
     } 
