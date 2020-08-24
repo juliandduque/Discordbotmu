@@ -86,7 +86,7 @@ bot.on("ready", function () {
 });
 
 bot.on("message", message => {
-
+    return;
     if (message.author.bot) return;
 
     if( message.author.id === '439620149067251735'){
