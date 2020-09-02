@@ -21,6 +21,7 @@ var picabot = [
     "Tu comentario hizo que squirtle tepeara",
     "Picabot killed BrianV in ferea",
     "Asi como perder el arka en 1 minuto",
+    "Asi como quitarte el registro tu mismo en el arka war",
     "Ahora vete y has un nuevo comienzo luego unete a voga",
     "mas bien, preguntate porque nuestro master abusa de nuestro bienestar",
     "como entro chou a la guild?"
@@ -63,10 +64,6 @@ bot.on("message", message => {
 	
     let args = message.content.substring(1).split(' ')
     let command = args[0].toLowerCase();
-
-    if (command.includes('esmarika')){
-        message.reply(esmarika[Math.floor(Math.random() * esmarika.length)]); 
-	}
 	
     switch (command) 
     {
