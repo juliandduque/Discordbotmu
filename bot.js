@@ -55,7 +55,8 @@ bot.on("ready", function () {
 bot.on("message", message => {
     if (message.author.bot) return;
 
-    if (message.content.toLowerCase().includes('picabot')){ message.reply(picabot[Math.floor(Math.random() * picabot.length)]);
+    if (message.content.toLowerCase().includes('picabot')){ 
+	    message.reply(picabot[Math.floor(Math.random() * picabot.length)]);
     } 
     if (message.content.indexOf('?') !== 0) return;
 	
@@ -132,7 +133,7 @@ bot.on("message", message => {
             }, 43500000);
             
             break; 
-        
+    }
       
 });
             
