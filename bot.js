@@ -5,37 +5,6 @@ const Table = require('cli-table');
 const fechaCS = new Date("May 26, 2020 20:00:00-05:00");
 const fechaArkaWar = new Date("May 27, 2020 21:00:00-05:00");
 const fechaIWC = new Date("May 31, 2020 20:00:00-05:00");
-var razas = [ "SM", "BK", "ELF", "MG", "DL", "SUM", "RF", "RW", "SL", "GL" ]
-var guilds = [ "GAMEOVER", "GREMORY", "GOLDCLAN"]
-var esmarika = [
-    "Si lo fuera me lo como",
-    "y pollo, porque nuestros bks no pegan como los de alla?",
-    "Si pero solo le gusta dar a los claymore",
-    "xd",
-    "no tan marika como perder el arka faltando 1 minuto",
-    "no tan marika como usted",
-    "rico",
-    "ve a leviar pollo",
-    "te has visto en el espejo?",
-    "y lo tiene asi: (_o_)",
-    "Si el es marika todos aca somos unas floresitas hermosas",
-    "Tu comentario mato a sebasvarg de reflejo",
-    "Mas marika que matar pollos en crywolf y que te baneen?",
-    "ok, dense un beso",
-    "La pregunta no es si es marika o no, la pregunta es cuantos FOX98 le caben en el culo"
-]
-
-var lazytepea = [
-    "https://media.discordapp.net/attachments/621481989945425922/722667528350072862/45e36p.png",
-    "https://media.discordapp.net/attachments/621481989945425922/722674076648341504/45e59k.jpg",
-    "https://i.imgflip.com/45onva.jpg",
-    "https://media.discordapp.net/attachments/686313294415659268/742471386840170516/unknown.png"
-]
-
-var arbanthos = [
-    "https://media.discordapp.net/attachments/621481989945425922/722674205249765386/unknown.png",
-    "https://i.imgflip.com/45oowy.jpg"
-]
 
 var picabot = [
     "https://media.discordapp.net/attachments/621481989945425922/723576706870280242/image0.png",
@@ -86,14 +55,8 @@ bot.on("ready", function () {
 });
 
 bot.on("message", message => {
-    return;
     if (message.author.bot) return;
 
-    if( message.author.id === '439620149067251735'){
-	    message.reply("https://cdn.discordapp.com/attachments/686313294415659268/747138351496429609/4cfq13.jpg");
-	}
-   // if (message.author.id === '413857838075740160' ) ) message.reply('${lickingeggplant}')
-    
     if (message.content.toLowerCase().includes('picabot')){ message.reply(picabot[Math.floor(Math.random() * picabot.length)]);
     } 
     if (message.content.indexOf('?') !== 0) return;
@@ -115,46 +78,21 @@ bot.on("message", message => {
             message.reply("Pongi me lo mama");
             break;
 	
-    	case 'luis':	    
-	    message.reply("https://images3.memedroid.com/images/UPLOADED13/5cf2b8aa308bb.jpeg");
-	    break;
-	
-	case 'xylon':	    
-	    message.reply("https://images3.memedroid.com/images/UPLOADED13/5cf2b8aa308bb.jpeg");
-	    break;
-		    
 	case 'bye':
 	    message.reply("https://tenor.com/view/bye-slide-baby-later-peace-out-gif-12999722"); 
 	    break
 		    
-        case 'comoingresargremory':
-            message.reply("3 cm o menos bb");
-            break;
-		    
-        case 'charmander':
-            message.reply(arbanthos[Math.floor(Math.random() * arbanthos.length)]);
-            break;
-		    
-        case 'squirt':
-            message.reply(lazytepea[Math.floor(Math.random() * lazytepea.length)]);
-            break;
-		    
+
         case 'help':
-            var helpresponse = "\n```- ping, pong, help, ayuda, goodbot, comoingresargremory, *esmarika, bye, // me obliga a decir huevadas \
+            var helpresponse = "\n```- ping, pong, help, ayuda, bye \
                             \n- tiempoCS, tiempoArka, tiempoIWC //reporta cuanto falta para el evento \
-                            \n- lista {evento} // lista los participantes registrados para el evento \
-                            \n- registrar {evento} {personaje} {raza} {radiance} {guild} // registra tu usuario al evento \
                             \n- darkness {server} //reporta la muerte del god y en 4 horas notifica \
                             \n- elite {server} //reporta la muerte de los elite y en 11 horas 55 min notifica```"
             message.reply(helpresponse); 
             break;
         
         case 'ayuda':
-            message.reply("Te ayudare a aprender ingles, insecto.");
-            break;
-
-        case 'goodbot':
-            message.reply("la geta pirobo");
+            message.reply("No, dilo en ingles");
             break;
 
         case 'tiempocs':
@@ -202,161 +140,7 @@ bot.on("message", message => {
             
             break; 
         
-        case 'lista':
-	    message.reply('Enlisteme este pirobo} ');
-	    return;
-		    
-            if (args.length < 2){
-                message.reply('Usa este formato: lista {evento (cs, arka, iwc)} ');
-                break;
-            }
-
-            let lista = args[1]
-            let tabla = ''
-            let body = '';
-            let http = ''
-
-            if (lista === 'cs') tabla = 'aadfacd'
-            else if (lista === 'arka') tabla = 'abbfdfe'
-            else if (lista === 'iwc') tabla = 'adedaff'
-            else{
-                message.reply('Solo se permite lista cs, arka, o iwc ');
-                break;
-            }
-
-            http = require('http');
-
-            let listarequest= http.get({
-                host: 'extendsclass.com',
-                path: '/jsonStorage.php?bin=' + tabla + ''+'?stuff='+ Math.random().toString(36).substring(2, 8) + Math.random().toString(36).substring(2, 8),
-                headers: 
-                { 
-                    'security-key': 'JorgeEsGay'
-                }
-            }, function(response) {
-                // Continuously update stream with data
-                response.on('data', function(chunk) {
-                    body += chunk;
-                });
-                response.on('end', function() {
-
-                    // Data reception is done, do whatever with it!
-                    console.log(body)
-                    let parsedResponse = JSON.parse(body)
-                    let tables = []
-
-                    var table = ''
-                    let counter = 0
-                    for(let listkey in parsedResponse) 
-                    {      
-                        if(counter%10 === 0)
-                        {
-                            if (table)
-                            {
-                                tables.push(table.toString())
-                            }
-
-                            table = new Table({
-                                head: ['Piloto', 'Personaje', 'Raza', 'Radiance', 'Guild']
-                              , colWidths: [15, 15, 10, 15, 15]
-                            });
-						}
-
-                        let personaje = parsedResponse[listkey]['personaje']
-                        let raza = parsedResponse[listkey]['raza']
-                        let guild = parsedResponse[listkey]['guild']
-                        let radiance = parsedResponse[listkey]['radiance']
-					    
-                        table.push([listkey, personaje, raza, radiance, guild])
-                        counter++;
-				    }
-
-                    tables.push(table.toString())
-
-                    for(var responsetable in tables)
-                    {
-                        console.log(tables[responsetable])
-                        message.reply("```" + tables[responsetable] + "```");
-					}
-                     message.reply("Total registrados: " + counter)
-                });
-            });
-            listarequest.shouldKeepAlive = false
-            break;
-    
-        case 'registrar':
-            message.reply('en este momento estamos bajo mantenimiento');
-	    return;
-		    
-            if (args.length < 6){
-                console.log(args.length)
-                message.reply('Usa este formato: registrar {evento} {personaje} {raza} {radiance} {guild}');
-                break
-            }
-            
-            let tabla2 = ''
-
-            let lista2 = args[1].toLowerCase()
-            if (lista2 === 'cs') tabla2 = 'aadfacd'
-            else if (lista2 === 'arka') tabla2 = 'abbfdfe'
-            else if (lista2 === 'iwc') tabla2 = 'adedaff'
-            else{
-                message.reply('Solo se permiten estos eventos: cs, arka, o iwc ');
-                break;
-            }
-
-            let sender2 = message.author.username 
-            let personaje2 = args[2]
-            let raza2 = args[3].toUpperCase()
-            let radiance2 = args[4].toLowerCase()
-            let guild2 = args[5].toUpperCase()
-
-            if( !razas.includes(raza2) ){
-                message.reply('Solo se permiten estas razas: ' + razas.toString()) 
-                break;
-			}
-
-            if( !guilds.includes(guild2) ){
-                message.reply('Solo se permiten estas guilds: ' + guilds.toString())  
-                break;
-			}
-            let options = {
-                "method": "PATCH",
-                "hostname": "extendsclass.com",
-                "path": '/api/json-storage/bin/' + tabla2,
-                "headers": 
-                { 
-                    'security-key': 'JorgeEsGay',
-                    'Cache-Control': 'no-cache, no-store'
-                }
-            };
-            let http2 = require('http');
-            let req = http2.request(options, function (res) {
-
-                let chunks = '';
-
-                res.on("data", function (chunk) {
-                    chunks += chunk;
-                });
-
-                res.on("end", function () {
-                        console.log(chunks)
-                        message.reply("Inscrito al evento: " + lista2);
-                });
-            });
-            let randomdict = {}
-            randomdict[sender2] = {
-                "personaje": personaje2,
-                "raza": raza2,
-                "guild": guild2,
-                "radiance": radiance2
-			}
-
-            req.write(JSON.stringify(randomdict));
-
-            req.shouldKeepAlive = false;
-            req.end();
-    }
+      
 });
             
            
