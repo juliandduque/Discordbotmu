@@ -48,9 +48,6 @@ function showRemaining(timeto, frequency) {
     return days + " dias, " + hours + " horas, " + minutes + " minutos, " + seconds + " segundos"
     }
 
-//const lickingeggplant = bot.emojis.get("746928250328186981");
-//const laura = bot.emojis.get("746928289473363968");
-
 bot.on("ready", function () {
 	console.log("Ready to begin!")
 });
@@ -127,7 +124,6 @@ bot.on("message", message => {
             if (args.length > 1) eliteserver = args[1]
 
             message.reply('Muerte de Elites reportada en server: ' + eliteserver);
-
 
             setTimeout(function () 
             {
