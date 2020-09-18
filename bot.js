@@ -73,6 +73,10 @@ bot.on("message", message => {
             message.reply("Pongi me lo mama");
             break;
 	
+        case 'chou':
+            message.reply("https://i.imgflip.com/4fgya4.jpg");
+            break;
+		    
 	case 'bye':
 	    message.reply("https://tenor.com/view/bye-slide-baby-later-peace-out-gif-12999722"); 
 	    break
