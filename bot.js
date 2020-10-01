@@ -84,9 +84,9 @@ bot.on("message", message => {
 
         case 'help':
             var helpresponse = "\n```- ping, pong, help, ayuda, bye \
-                            \n- tiempoCS, tiempoArka, tiempoIWC //reporta cuanto falta para el evento \
-                            \n- darkness {server} //reporta la muerte del god y en 4 horas notifica \
-                            \n- elite {server} //reporta la muerte de los elite y en 11 horas 55 min notifica```"
+                            \n- tiempoCS, tiempoArka, tiempoIWC // reporta cuanto falta para el evento \
+                            \n- darkness {server} // reporta la muerte del god y en 4 horas notifica \
+                            \n- elite {server} // reporta la muerte de los elite y en 11 horas 55 min notifica```"
             message.reply(helpresponse); 
             break;
         
