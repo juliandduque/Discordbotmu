@@ -20,7 +20,7 @@ var picabot = [
     "mas bien, preguntate porque nuestro master abusa de nuestro bienestar", 
     "ehm",
     "tengan cuidado con boahancock, es toxico",
-    "hola, mi pito en tu cola',
+    "hola, mi pito en tu cola",
     "ya te inscribiste al CS pollito de kk?"
 ]
 function showRemaining(timeto, frequency) {
