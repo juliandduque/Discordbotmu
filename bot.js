@@ -12,19 +12,16 @@ var picabot = [
     "si",
     "?",
     "no gracias",
-    "Picahielo entered the game",
     "Porque hablan tanto sobre mi?",
     "hay dias que si",
-    "Tu comentario mato a RuIer de reflejo",
-    "Tu comentario hizo que banearan a BoaHancock",
-    "Tu comentario hizo que banearan a Charmander",
-    "Tu comentario hizo que squirtle tepeara",
-    "Picabot killed BrianV in ferea",
     "Asi como perder el arka en 1 minuto",
     "Asi como quitarte el registro tu mismo en el arka war",
     "Ahora vete y has un nuevo comienzo luego unete a voga",
-    "mas bien, preguntate porque nuestro master abusa de nuestro bienestar",
-    "como entro chou a la guild?"
+    "mas bien, preguntate porque nuestro master abusa de nuestro bienestar", 
+    "ehm",
+    "tengan cuidado con boahancock, es toxico",
+    "hola, mi pito en tu cola',
+    "ya te inscribiste al CS pollito de kk?"
 ]
 function showRemaining(timeto, frequency) {
 
@@ -73,8 +70,8 @@ bot.on("message", message => {
             message.reply("Pongi me lo mama");
             break;
 	
-        case 'chou':
-            message.reply("https://i.imgflip.com/4fgya4.jpg");
+        case 'QueenBlack':
+            message.reply("https://media.discordapp.net/attachments/754725141795307581/768943115280973854/unknown.png");
             break;
 		    
 	case 'bye':
