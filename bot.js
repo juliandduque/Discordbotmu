@@ -70,7 +70,7 @@ bot.on("message", message => {
             message.reply("Pongi me lo mama");
             break;
 	
-        case 'QueenBlack':
+        case 'queenblack':
             message.reply("https://media.discordapp.net/attachments/754725141795307581/768943115280973854/unknown.png");
             break;
 		    
