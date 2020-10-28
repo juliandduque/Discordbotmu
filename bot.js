@@ -77,7 +77,10 @@ bot.on("message", message => {
 	case 'bye':
 	    message.reply("https://tenor.com/view/bye-slide-baby-later-peace-out-gif-12999722"); 
 	    break
-		    
+       
+       case 'juand':
+	    message.reply("https://imgflip.com/i/4k77tx"); 
+	    break
 
         case 'help':
             var helpresponse = "\n```- ping, pong, help, ayuda, bye \
