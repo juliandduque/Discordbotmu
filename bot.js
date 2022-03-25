@@ -81,7 +81,7 @@ bot.on("message", message => {
             {
 		let darknessreturner = 'Ventana del God of darkness abierta por 2 horas @here';
                 message.reply(darknessreturner);
-            }, 14400000);
+            }, 10800000);
             
             break;
             
