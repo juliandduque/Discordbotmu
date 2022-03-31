@@ -27,8 +27,8 @@ function showRemainingTime(timeto, frequency) {
     return days + " dias, " + hours + " horas, " + minutes + " minutos, " + seconds + " segundos"
 }
 
-function reply(server) {
-    let message = 'Elites salen en 2 minutos server ' + server + ' @HUNTER'
+function reply(server, message) {
+    let replyMessage = 'Elites salen en 2 minutos server ' + server + ' @HUNTER'
     message.reply(message);
 };
 
@@ -89,7 +89,7 @@ bot.on("message", message => {
             let godServer = 1
             if (args.length > 1) godServer = args[1]
             message.reply('Muerte de God of Darkness reportada en server: ' + godServer);
-	    setTimeout(reply(godServer), 5000);
+	    setTimeout(reply(godServer, message), 5000);
             break;
 		    
         case 'elite':
