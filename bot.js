@@ -98,7 +98,7 @@ bot.on("message", message => {
             message.reply('Muerte de Elites reportada en server {eliteServer});
             setTimeout(function () 
             {
-         	let eliteReply = 'Elites {eliteElement} del mapa {eliteMap} salen en 2 minutos server {server} @here'
+         	let eliteReply = 'Elites {eliteElement} del mapa {eliteMap} salen en 2 minutos server {eliteServer} @here'
                 message.reply(eliteReply);
             }, 5000); //86400000
             break; 
