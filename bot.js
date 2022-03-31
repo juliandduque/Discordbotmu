@@ -51,9 +51,9 @@ bot.on("message", message => {
 
         case 'help':
             var helpResponse = "\n```- ping, pong, help, ayuda \
-                            \n- tiempoCS, tiempoArka // reporta cuanto falta para el evento \
-                            \n- darkness {server} // reporta la muerte del god y en 4 horas notifica \
-                            \n- elite {server} // reporta la muerte de los elite y en 11 horas 55 min notifica```"
+                            \n- tiempoCS, tiempoArka // cuanto falta para el evento \
+                            \n- darkness [server] // reporta la muerte del god y en 4 horas notifica \
+                            \n- elite [server] [elemento] [mapa] // reporta la muerte de los elite y en 11 horas 55 min notifica```"
             message.reply(helpResponse); 
             break;
         
@@ -72,10 +72,10 @@ bot.on("message", message => {
         case 'darkness':
             let godServer = 1
             if (args.length > 1) godServer = args[1]
-            message.reply('Muerte de God of Darkness reportada en server: ' + godServer);
+            message.reply('Muerte de God of Darkness reportada en server: {godServer}');
 	    setTimeout(function () 
             {
-		let messageReply = 'Ventana del God of darkness abierta por 2 horas en server ' + godServer + ' @here';
+		let messageReply = 'Ventana del God of darkness abierta por 2 horas en server {godServer} @here';
                 message.reply(messageReply);
             }, 10800000);
             break;
@@ -91,15 +91,15 @@ bot.on("message", message => {
 		eliteMap = args[3]
 	    }
 	    else{
-	    	message.reply('Para reportar usa este formato: elite {server} {elemento} {mapa});
+	    	message.reply('Para reportar usa este formato: elite [server] [elemento] [mapa]);
 		break;
 	    }
 		 
-            message.reply('Muerte de Elites reportada en server: ' + eliteServer);
+            message.reply('Muerte de Elites reportada en server {eliteServer});
             setTimeout(function () 
             {
-         	let eliteReplyr = 'Elites ' + eliteElement + ' del mapa ' + eliteMap + ' salen en 2 minutos server ' + server + ' @here'
-                message.reply(eliteReplyr);
+         	let eliteReply = 'Elites {eliteElement} del mapa {eliteMap} salen en 2 minutos server {server} @here'
+                message.reply(eliteReply);
             }, 5000); //86400000
             break; 
 	
