@@ -85,7 +85,7 @@ bot.on("message", message => {
             }, 10800000);
             break;
 		    
-        case 'darknessTEST':
+        case 'darknesstest':
             let godServer = 1
             if (args.length > 1) godServer = args[1]
             message.reply('Muerte de God of Darkness reportada en server: ' + godServer);
