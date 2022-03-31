@@ -91,7 +91,7 @@ bot.on("message", message => {
 		eliteMap = args[3]
 	    }
 	    else{
-	    	message.reply('Para reportar usa este formato: elite server elemento mapa);
+	    	message.reply('Para reportar usa este formato: ?elite server elemento mapa');
 		break;
 	    }
 		 
