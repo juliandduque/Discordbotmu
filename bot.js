@@ -5,7 +5,7 @@ const Table = require('cli-table');
 const fechaCS = new Date("March 20, 2022 18:00:00-05:00");
 const fechaArkaWar = new Date("March 19, 2022 18:30:00-05:00");
 
-function showRemaining(timeto, frequency) {
+function showRemainingTime(timeto, frequency) {
 
     var _second = 1000;
     var _minute = _second * 60;
@@ -55,11 +55,11 @@ bot.on("message", message => {
 	    break
 
         case 'help':
-            var helpresponse = "\n```- ping, pong, help, ayuda \
+            var helpResponse = "\n```- ping, pong, help, ayuda \
                             \n- tiempoCS, tiempoArka // reporta cuanto falta para el evento \
                             \n- darkness {server} // reporta la muerte del god y en 4 horas notifica \
                             \n- elite {server} // reporta la muerte de los elite y en 11 horas 55 min notifica```"
-            message.reply(helpresponse); 
+            message.reply(helpResponse); 
             break;
         
         case 'ayuda':
@@ -67,11 +67,11 @@ bot.on("message", message => {
             break;
 
         case 'tiempocs':
-            message.reply(showRemaining(fechaCS, 12096e5));
+            message.reply(showRemainingTime(fechaCS, 12096e5));
             break;
 
         case 'tiempoarka':
-            message.reply(showRemaining(fechaArkaWar, 604800*1000));
+            message.reply(showRemainingTime(fechaArkaWar, 604800*1000));
             break;
 		    
         case 'darkness':
@@ -86,21 +86,21 @@ bot.on("message", message => {
             break;
 		    
         case 'darknessTEST':
-            let darknessserver = 1
-            if (args.length > 1) darknessserver = args[1]
-            message.reply('Muerte de God of Darkness reportada en server: ' + darknessserver);
-	    setTimeout(reply(darknessserver), 5000);
+            let godServer = 1
+            if (args.length > 1) godServer = args[1]
+            message.reply('Muerte de God of Darkness reportada en server: ' + godServer);
+	    setTimeout(reply(godServer), 5000);
             break;
 		    
         case 'elite':
             
-            let eliteserver = 1
-            if (args.length > 1) eliteserver = args[1]
-            message.reply('Muerte de Elites reportada en server: ' + eliteserver);
+            let eliteServer = 1
+            if (args.length > 1) eliteServer = args[1]
+            message.reply('Muerte de Elites reportada en server: ' + eliteServer);
             setTimeout(function () 
             {
-         	let elitereturner = 'Elites salen en 2 minutos @here'
-                message.reply(elitereturner);
+         	let eliteReplyr = 'Elites salen en 2 minutos @here'
+                message.reply(eliteReplyr);
             }, 86400000);
             break; 
     }
