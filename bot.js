@@ -119,6 +119,6 @@ function reply(server)
 {
     let message = 'Elites salen en 2 minutos server ' + server + ' @HUNTER'
     console.log(message);
-}
+});
            
 bot.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
