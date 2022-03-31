@@ -88,7 +88,7 @@ bot.on("message", message => {
             {
 		let messageReply = 'Ventana del God of darkness abierta por 2 horas en server ' + godServer + ' @HUNTER';
                 message.reply(messageReply);
-            }, 10800000);
+            }, 10000);
             break;
 		    
         case 'elite':
