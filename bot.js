@@ -27,11 +27,6 @@ function showRemainingTime(timeto, frequency) {
     return days + " dias, " + hours + " horas, " + minutes + " minutos, " + seconds + " segundos"
 }
 
-function reply(server, message) {
-    let replyMessage = 'Elites salen en 2 minutos server ' + server + ' @HUNTER'
-    message.reply(message);
-};
-
 bot.on("ready", function () {
 	console.log("Ready to begin!")
 });
@@ -89,7 +84,11 @@ bot.on("message", message => {
             let godServer = 1
             if (args.length > 1) godServer = args[1]
             message.reply('Muerte de God of Darkness reportada en server: ' + godServer);
-	    setTimeout(reply(godServer, message), 5000);
+	    setTimeout(function () 
+            {
+		let messageReply = 'Ventana del God of darkness abierta por 2 horas en server ' + godServer + ' @HUNTER';
+                message.reply(messageReply);
+            }, 10800000);
             break;
 		    
         case 'elite':
