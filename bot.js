@@ -72,10 +72,10 @@ bot.on("message", message => {
         case 'darkness':
             let godServer = 1
             if (args.length > 1) godServer = args[1]
-            message.reply('Muerte de God of Darkness reportada en server: ${godServer}');
+            message.reply(`Muerte de God of Darkness reportada en server: ${godServer}`);
 	    setTimeout(function () 
             {
-		let messageReply = 'Ventana del God of darkness abierta por 2 horas en server ${godServer} @here';
+		let messageReply = `Ventana del God of darkness abierta por 2 horas en server ${godServer} @here`;
                 message.reply(messageReply);
             }, 10800000);
             break;
@@ -95,10 +95,10 @@ bot.on("message", message => {
 		break;
 	    }
 		 
-            message.reply('Muerte de Elites reportada en server ${eliteServer}');
+            message.reply(`Muerte de Elites reportada en server ${eliteServer}`);
             setTimeout(function () 
             {
-         	let eliteReply = 'Elites ${eliteElement} del mapa ${eliteMap} salen en 2 minutos server ${eliteServer} @here'
+         	let eliteReply = `Elites ${eliteElement} del mapa ${eliteMap} salen en 2 minutos server ${eliteServer} @here`
                 message.reply(eliteReply);
             }, 5000); //86400000
             break; 
