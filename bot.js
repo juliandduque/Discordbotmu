@@ -100,7 +100,7 @@ bot.on("message", message => {
             {
          	let eliteReply = `Elites ${eliteElement} del mapa ${eliteMap} salen en 2 minutos server ${eliteServer} @here`
                 message.reply(eliteReply);
-            }, 5000); //86400000
+            }, 86400000); 
             break; 
 	
     }
