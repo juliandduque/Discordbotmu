@@ -27,6 +27,11 @@ function showRemaining(timeto, frequency) {
     return days + " dias, " + hours + " horas, " + minutes + " minutos, " + seconds + " segundos"
 }
 
+function reply(server) {
+    let message = 'Elites salen en 2 minutos server ' + server + ' @HUNTER'
+    message.reply(message);
+};
+
 bot.on("ready", function () {
 	console.log("Ready to begin!")
 });
@@ -70,55 +75,37 @@ bot.on("message", message => {
             break;
 		    
         case 'darkness':
-            
             let darknessserver = 1
-            
             if (args.length > 1) darknessserver = args[1]
-            
             message.reply('Muerte de God of Darkness reportada en server: ' + darknessserver);
-
             setTimeout(function () 
             {
 		let darknessreturner = 'Ventana del God of darkness abierta por 2 horas @here';
                 message.reply(darknessreturner);
             }, 10800000);
-            
             break;
 		    
         case 'darknessTEST':
-            
             let darknessserver = 1
-            
             if (args.length > 1) darknessserver = args[1]
-            
             message.reply('Muerte de God of Darkness reportada en server: ' + darknessserver);
-
 	    setTimeout(reply(darknessserver), 5000);
             break;
 		    
         case 'elite':
             
             let eliteserver = 1
-            
             if (args.length > 1) eliteserver = args[1]
-
             message.reply('Muerte de Elites reportada en server: ' + eliteserver);
-
             setTimeout(function () 
             {
          	let elitereturner = 'Elites salen en 2 minutos @here'
                 message.reply(elitereturner);
             }, 86400000);
-            
             break; 
     }
       
 });
             
-function reply(server) 
-{
-    let message = 'Elites salen en 2 minutos server ' + server + ' @HUNTER'
-    console.log(message);
-};
            
 bot.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
