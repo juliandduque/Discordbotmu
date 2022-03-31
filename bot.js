@@ -86,7 +86,7 @@ bot.on("message", message => {
             message.reply('Muerte de God of Darkness reportada en server: ' + godServer);
 	    setTimeout(function () 
             {
-		let messageReply = 'Ventana del God of darkness abierta por 2 horas en server ' + godServer + ' <@&958783502617296967>';
+		let messageReply = 'Ventana del God of darkness abierta por 2 horas en server ' + godServer + ' <@&958554881197764668>';
                 message.reply(messageReply);
             }, 10000);
             break;
