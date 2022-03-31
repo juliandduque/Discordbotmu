@@ -70,38 +70,39 @@ bot.on("message", message => {
             break;
 		    
         case 'darkness':
-            let darknessserver = 1
-            if (args.length > 1) darknessserver = args[1]
-            message.reply('Muerte de God of Darkness reportada en server: ' + darknessserver);
-            setTimeout(function () 
-            {
-		let darknessreturner = 'Ventana del God of darkness abierta por 2 horas @here';
-                message.reply(darknessreturner);
-            }, 10800000);
-            break;
-		    
-        case 'darknesstest':
             let godServer = 1
             if (args.length > 1) godServer = args[1]
             message.reply('Muerte de God of Darkness reportada en server: ' + godServer);
 	    setTimeout(function () 
             {
-		let messageReply = 'Ventana del God of darkness abierta por 2 horas en server ' + godServer + ' <@&958554881197764668>';
+		let messageReply = 'Ventana del God of darkness abierta por 2 horas en server ' + godServer + ' @here';
                 message.reply(messageReply);
-            }, 10000);
+            }, 10800000);
             break;
 		    
         case 'elite':
             
             let eliteServer = 1
-            if (args.length > 1) eliteServer = args[1]
+	    let eliteElement = "fire"
+	    let eliteMap = "abyss"
+            if (args.length > 3){ 
+		eliteServer = args[1]
+		eliteElement = args[2]
+		eliteMap = args[3]
+	    }
+	    else{
+	    	message.reply('Para reportar usa este formato: elite {server} {elemento} {mapa});
+		break;
+	    }
+		 
             message.reply('Muerte de Elites reportada en server: ' + eliteServer);
             setTimeout(function () 
             {
-         	let eliteReplyr = 'Elites salen en 2 minutos @here'
+         	let eliteReplyr = 'Elites ' + eliteElement + ' del mapa ' + eliteMap + ' salen en 2 minutos server ' + server + ' @here'
                 message.reply(eliteReplyr);
-            }, 86400000);
+            }, 5000); //86400000
             break; 
+	
     }
       
 });
