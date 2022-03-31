@@ -84,7 +84,18 @@ bot.on("message", message => {
             }, 10800000);
             
             break;
+		    
+        case 'darknessTEST':
             
+            let darknessserver = 1
+            
+            if (args.length > 1) darknessserver = args[1]
+            
+            message.reply('Muerte de God of Darkness reportada en server: ' + darknessserver);
+
+	    setTimeout(reply(darknessserver), 5000);
+            break;
+		    
         case 'elite':
             
             let eliteserver = 1
@@ -104,5 +115,10 @@ bot.on("message", message => {
       
 });
             
+function reply(server) 
+{
+    let message = 'Elites salen en 2 minutos server ' + server + ' @HUNTER'
+    console.log(message);
+}
            
 bot.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
