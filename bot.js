@@ -52,8 +52,9 @@ bot.on("message", message => {
         case 'help':
             var helpResponse = "\n```- ping, pong, help, ayuda \
                             \n- tiempoCS, tiempoArka // cuanto falta para el evento \
-                            \n- darkness [server] // reporta la muerte del god y en 4 horas notifica \
-                            \n- elite [server] [elemento] [mapa] // reporta la muerte de los elite y en 11 horas 55 min notifica```"
+                            \n- darkness [server] // reporta la muerte del god y en 3 horas notifica \
+                            \n- elite [server] [elemento] [mapa] // reporta la muerte de los elite y en 11 horas 55 min notifica \
+                            \n- ferea [server] // reporta la muerte del ferea y en 4 horas notifica \```"
             message.reply(helpResponse); 
             break;
         
@@ -113,7 +114,7 @@ bot.on("message", message => {
             {
          	let messageReply = `ferea  del server ${fereaServer} salen en 5 minutos @here`
                 message.reply(messageReply);
-            }, 43200000 - 300000); // 12 hours in ms - 5 min in ms
+            }, 14400000 - 300000); // 4 hours in ms - 5 min in ms
             break; 
     }
       
