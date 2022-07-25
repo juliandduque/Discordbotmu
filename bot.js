@@ -70,7 +70,7 @@ bot.on("message", message => {
             break;
 		    
         case 'darkness':
-            let godServer = 1
+            let godServer = 5
             if (args.length > 1) godServer = args[1]
             message.reply(`Muerte de God of Darkness reportada en server: ${godServer}`);
 	    setTimeout(function () 
@@ -82,7 +82,7 @@ bot.on("message", message => {
 		    
         case 'elite':
             
-            let eliteServer = 1
+            let eliteServer = 5
 	    let eliteElement = "fire"
 	    let eliteMap = "abyss"
             if (args.length > 3){ 
@@ -98,11 +98,23 @@ bot.on("message", message => {
             message.reply(`Muerte de Elites reportada en server ${eliteServer}`);
             setTimeout(function () 
             {
-         	let eliteReply = `Elites ${eliteElement} del mapa ${eliteMap} salen en 2 minutos server ${eliteServer} @here`
+         	let eliteReply = `Elites ${eliteElement} del mapa ${eliteMap} salen en 5 minutos server ${eliteServer} @here`
                 message.reply(eliteReply);
-            }, 86400000); 
+            }, 86400000 - 300000);  // 24 hours in ms - 5 min in ms
             break; 
 	
+		    
+        case 'ferea':
+            
+            let fereaServer = 1
+            if (args.length > 1) fereaServer = args[1]
+            message.reply(`Muerte de ferea reportada en server: ${fereaServer}`);
+            setTimeout(function () 
+            {
+         	let messageReply = `ferea  del server ${fereaServer} salen en 5 minutos @here`
+                message.reply(messageReply);
+            }, 43200000 - 300000); // 12 hours in ms - 5 min in ms
+            break; 
     }
       
 });
