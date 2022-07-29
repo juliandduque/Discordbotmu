@@ -93,7 +93,7 @@ bot.on("message", message => {
 		eliteMap = args[3]
 	    }
 	    else{
-	    	message.reply('Para reportar usa este formato: ?elite server elemento mapa');
+	    	message.reply('Para reportar usa este formato: ?elite {server} {elemento} {mapa}');
 		break;
 	    }
 		 
@@ -122,20 +122,27 @@ bot.on("message", message => {
             
             let refineriaServer = 1
             let refineriaTiempoHoras = 24
-            if (args.length > 2 && Number.isInteger(args[2]))
+            if (args.length > 2)
 	    {
-		    refineriaServer = args[1]
-		    refineriaTiempoHoras = int(args[2])
-		    message.reply(`Refineria en server: ${refineriaServer} abre en ${refineriaTiempoHoras} horas`);
-		    setTimeout(function () 
+		    if (Number.isInteger(args[2]))
 		    {
-			let messageReply = `Refineria  del server ${refineriaServer} va a abrir @here`
-			message.reply(messageReply);
-		    }, (refineriaTiempoHoras*60*60*1000) - 300000); // hours in ms - 5 min in ms
+			    refineriaServer = args[1]
+			    refineriaTiempoHoras = int(args[2])
+			    message.reply(`Refineria en server: ${refineriaServer} abre en ${refineriaTiempoHoras} horas`);
+			    setTimeout(function () 
+			    {
+				let messageReply = `Refineria  del server ${refineriaServer} va a abrir @here`
+				message.reply(messageReply);
+			    }, (refineriaTiempoHoras*60*60*1000) - 300000); // hours in ms - 5 min in ms
+		    }
+		    else{
+			    message.reply('Para reportar usa este formato: ?refineria {server} {horas para abrir}. Horas para abrir tiene que ser un numero. );
+		    }
+		    
 	    }
 	    else
 	    {
-		    message.reply('Para reportar usa este formato: ?refineria server horas_para_abrir');
+		    message.reply('Para reportar usa este formato: ?refineria {server} {horas para abrir}');
 	    }
             break; 
     }
