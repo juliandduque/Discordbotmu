@@ -126,7 +126,7 @@ bot.on("message", message => {
 	    {
 		    let refineriaTiempoHoras = Number(args[2]);
 
-		    if (Number.isInteger(num))
+		    if (Number.isInteger(refineriaTiempoHoras))
 		    {
 			    let refineriaServer = args[1]
 			    message.reply(`Refineria en server: ${refineriaServer} abre en ${refineriaTiempoHoras} horas`);
