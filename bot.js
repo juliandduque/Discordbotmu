@@ -136,7 +136,7 @@ bot.on("message", message => {
 			    }, (refineriaTiempoHoras*60*60*1000) - 300000); // hours in ms - 5 min in ms
 		    }
 		    else{
-			    message.reply('Para reportar usa este formato: ?refineria {server} {horas para abrir}. Horas para abrir tiene que ser un numero. );
+			    message.reply('Para reportar usa este formato: ?refineria {server} {horas para abrir}. Horas para abrir tiene que ser un numero.' );
 		    }
 		    
 	    }
