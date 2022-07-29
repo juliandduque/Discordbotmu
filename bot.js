@@ -124,12 +124,11 @@ bot.on("message", message => {
             let refineriaTiempoHoras = 24
             if (args.length > 2)
 	    {
-		    const num = Number(args[2]);
+		    let refineriaTiempoHoras = Number(args[2]);
 
 		    if (Number.isInteger(num))
 		    {
 			    let refineriaServer = args[1]
-			    let refineriaTiempoHoras = int(args[2])
 			    message.reply(`Refineria en server: ${refineriaServer} abre en ${refineriaTiempoHoras} horas`);
 			    setTimeout(function () 
 			    {
