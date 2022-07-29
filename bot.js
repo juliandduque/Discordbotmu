@@ -52,6 +52,7 @@ bot.on("message", message => {
         case 'help':
             var helpResponse = "\n```- ping, pong, help, ayuda \
                             \n- tiempoCS, tiempoArka // cuanto falta para el evento \
+                            \n- refineria [server] [tiempo]// reporta el tiempo para que abra la refineria de kanturu \
                             \n- darkness [server] // reporta la muerte del god y en 3 horas notifica \
                             \n- elite [server] [elemento] [mapa] // reporta la muerte de los elite y en 11 horas 55 min notifica \
                             \n- ferea [server] // reporta la muerte del ferea y en 4 horas notifica \```"
@@ -115,6 +116,27 @@ bot.on("message", message => {
          	let messageReply = `ferea  del server ${fereaServer} salen en 5 minutos @here`
                 message.reply(messageReply);
             }, 14400000 - 300000); // 4 hours in ms - 5 min in ms
+            break; 
+		    
+	case 'refineria':
+            
+            let refineriaServer = 1
+            let refineriaTiempoHoras = 24
+            if (args.length > 2 && Number.isInteger(args[2])
+	    {
+		    refineriaServer = args[1]
+		    refineriaTiempoHoras = int(args[2])
+		    message.reply(`Refineria en server: ${refineriaServer} abre en ${refineriaTiempoHoras} horas`);
+		    setTimeout(function () 
+		    {
+			let messageReply = `Refineria  del server ${refineriaServer} va a abrir @here`
+			message.reply(messageReply);
+		    }, (refineriaTiempoHoras*60*60*1000) - 300000); // hours in ms - 5 min in ms
+	    }
+	    else
+	    {
+		    message.reply('Para reportar usa este formato: ?refineria server horas_para_abrir');
+	    }
             break; 
     }
       
