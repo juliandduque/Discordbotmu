@@ -124,7 +124,9 @@ bot.on("message", message => {
             let refineriaTiempoHoras = 24
             if (args.length > 2)
 	    {
-		    if (Number.isInteger(args[2]))
+		    const num = Number(args[2]);
+
+		    if (Number.isInteger(num))
 		    {
 			    refineriaServer = args[1]
 			    refineriaTiempoHoras = int(args[2])
